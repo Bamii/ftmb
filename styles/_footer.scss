@@ -1,0 +1,203 @@
+@import "variables";
+
+footer {
+  background: #0f4665;
+}
+
+.footer-container {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding: 0 !important;
+
+  .main-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 2rem !important;
+
+    @include minWidth($breakpoint-tablet) {
+      flex-direction: row;
+      padding: 3rem 4rem !important;
+
+      .logo {
+        flex: 2;
+      }
+
+      .footer-links-section {
+        flex: 4;
+      }
+
+      .social-links-section {
+        flex: 1;
+      }
+    }
+
+    @include minWidth($breakpoint-desktop) {
+      padding: 3rem 10rem !important;
+    }
+
+    .logo {
+      width: 100%;
+    }
+
+    .footer-links-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      @include minWidth($breakpoint-tablet) {
+        flex-direction: row;
+      }
+
+      .mailing-list-container,
+      .links-column-container {
+        display: flex;
+        flex: 1;
+        width: 100%;
+
+        .links-column {
+          width: 25%;
+          flex: 1;
+          margin: 1.5rem 1rem 1.5rem 0;
+
+          @include minWidth($breakpoint-tablet) {
+            margin: 0;
+          }
+
+          &.master {
+            flex: 2;
+          }
+
+          .link-row-header {
+            color: #c8933b;
+            padding: 0.3rem 0;
+          }
+
+          .link-row {
+            font-size: 0.8rem;
+            padding: 0.5rem 0;
+
+            &:hover {
+              font-size: 0.9rem;
+              color: #c8933b;
+              cursor: pointer;
+            }
+          }
+
+          .input-container {
+            width: 100%;
+            display: flex;
+
+            input {
+              width: 70%;
+              flex: 1;
+              border-radius: 8px 0 0 8px;
+              border: 1px solid #34657f;
+              background: transparent;
+              color: white;
+              padding-left: 1rem;
+            }
+
+            button {
+              padding: 0.8rem 1rem;
+              background: #e99f1e;
+              color: white;
+              text-transform: uppercase;
+              font-size: 0.8rem;
+              border-radius: 0 8px 8px 0;
+              border: none;
+            }
+
+            @include minWidth($breakpoint-tablet) {
+              flex-direction: column;
+
+              input {
+                width: 100%;
+                flex: 1;
+                border-radius: 8px;
+                padding: 0.8rem 1rem;
+              }
+
+              button {
+                padding: 0.8rem 0;
+                border-radius: 8px;
+                margin-top: 1rem;
+              }
+            }
+
+            @include minWidth($breakpoint-desktop) {
+              flex-direction: row;
+
+              input {
+                border-radius: 8px 0 0 8px;
+              }
+
+              button {
+                border-radius: 0 8px 8px 0;
+                padding: 0.8rem;
+                margin-top: 0;
+              }
+            }
+          }
+        }
+      }
+
+      .mailing-list-container {
+      }
+    }
+
+    .social-links-section {
+      height: 100%;
+      width: 100%;
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        text-align: right;
+
+        @include minWidth($breakpoint-tablet) {
+          flex-direction: column;
+        }
+
+        .social-link {
+          padding: 0.5rem;
+
+          img {
+            cursor: pointer;
+            height: 2rem;
+            width: 2rem;
+
+            &:hover {
+              height: 2.3rem;
+              width: 2.3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.copyright-container {
+  background: #53565b;
+
+  .copyright {
+    @include generalWidth();
+    margin: 0 auto;
+  
+    padding: 2rem;
+    color: white;
+    font-size: 0.8rem;
+  
+    @include minWidth($breakpoint-tablet) {
+      padding: 1rem 4rem;
+    }
+  
+    @include minWidth($breakpoint-desktop) {
+      padding: 1rem 10rem;
+    }
+  }
+}

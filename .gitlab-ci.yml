@@ -1,0 +1,19 @@
+before_script:
+  - apt-get update -qq
+  - apt-get install -qq git
+  # Setup SSH deploy keys
+  - 'which ssh-agent || ( apt-get install -qq openssh-client )'
+  - eval $(ssh-agent -s)
+  - ssh-add <(echo "$SSH_PRIVATE_KEY")
+  - mkdir -p ~/.ssh
+  - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+deploy_production:
+  type: deploy
+  environment:
+    name: production
+    url: http://207.148.16.99
+  script:
+    - ssh root@207.148.16.99 "cd /var/www/fbn && git checkout FirstTrust && git pull && exit"
+  only:
+    - FirstTrust

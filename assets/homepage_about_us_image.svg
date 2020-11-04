@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 788.24 710.29" style="enable-background:new 0 0 788.24 710.29;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{fill:#999999;}
+	.st2{fill:#E98924;}
+	.st3{fill:#005E8F;}
+	.st4{clip-path:url(#SVGID_4_);}
+	.st5{fill:#E6CFAF;}
+	.st6{fill:#E48D25;}
+</style>
+<g id="Capa_3" transform="translate(195.125 -0.102)">
+	<g id="Group_1904" transform="translate(-195.125 0.102)">
+		<g>
+			<defs>
+				<rect id="SVGID_1_" x="-391.68" y="24.66" width="1501" height="867"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+			</clipPath>
+			<g id="Group_1902" transform="translate(0 0)" class="st0">
+				<path id="Path_4332" class="st1" d="M585.96,513.44V24.51H415.68v253.81c0,96.5-76.24,174.73-170.28,174.73v60.39
+					c0,96.5,76.24,174.73,170.28,174.73C509.73,688.18,585.96,609.96,585.96,513.44z"/>
+				<path id="Path_4333" class="st2" d="M75.09,24.51v253.81c0,96.5,76.24,174.73,170.29,174.73V24.51H75.09z"/>
+				<path id="Path_4334" class="st3" d="M415.66,278.33V24.51H245.37v428.56C339.42,453.07,415.66,374.82,415.66,278.33z"/>
+			</g>
+		</g>
+		<g>
+			<defs>
+				<rect id="SVGID_3_" x="-391.68" y="24.66" width="1501" height="867"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+			</clipPath>
+			<g id="Group_1903" transform="translate(0 0)" class="st4">
+				<path id="Path_4336" class="st5" d="M494.89,205.35c53.1-53.11,137.65-52.47,188.86,1.42c51.21,53.9,49.68,140.64-3.42,193.76
+					S542.68,453,491.47,399.11S441.79,258.46,494.89,205.35z"/>
+				<path id="Path_4335" class="st6" d="M683.78,206.84c-25.13-26.62-60.32-41.41-96.92-40.72l1.52,273.74
+					c34.59-0.6,67.58-14.69,91.93-39.27C733.43,347.5,734.99,260.75,683.78,206.84z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

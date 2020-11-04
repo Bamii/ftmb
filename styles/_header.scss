@@ -1,0 +1,491 @@
+@import "variables";
+
+header {
+  position: relative;
+
+  #top-strip-container {
+    width: 100%;
+    z-index: 100000;
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem;
+    color: black;
+    background: $gray-bg; 
+    position: fixed;
+
+    img.default-logo {
+      display: block;
+    }
+
+    img.white-logo {
+      display: none;
+    }
+
+    &.transparent {
+      @include minWidth($breakpoint-desktop) {
+        background: transparent;
+        color: white;
+  
+        // img.default-logo {
+        //   display: none !important;
+        // }
+  
+        // img.white-logo {
+        //   display: block !important;
+        // }
+      }
+    }
+
+    #top-strip {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      #logo {
+        width: 50%;
+        height: auto;
+        padding: 1.5rem 0;
+        position: relative;
+
+        .main{
+          position: relative;
+          left: 0;
+          opacity: 1;
+        }
+
+        .icon{
+          width:110px;
+          height:110px;
+          bottom: -15px;
+          left: -35px;
+          opacity: 0.3;
+          position: absolute;
+          animation: shrink 1s ease-in 1s 1 normal forwards;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          animation: tada 1s ease-in 2s 1 normal forwards;
+        }
+
+        @include minWidth($breakpoint-tablet) {
+          height: 6.8rem;
+          width: auto;
+
+          img {
+            height: 100%;
+            width: auto;
+          }
+        }
+      }
+
+      #mobile-menu-button {
+        display: flex;
+        cursor: pointer;
+
+        @include minWidth($breakpoint-desktop) {
+          display: none;
+        }
+      }
+
+      #navigation-wrapper {
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+
+        @include minWidth($breakpoint-desktop) {
+          display: flex;
+        }
+
+        .menu-links {
+          display: none;
+          align-items: center;
+          padding: 1.2rem 0 1.5rem 0;
+
+          .menu-link {
+            display: inline-flex;
+            align-items: center;
+            margin-left: 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            color: #0F4665;
+
+            &:hover {
+              color: #e99f1e;
+            }
+          }
+
+          @include minWidth($breakpoint-desktop) {
+            display: inline-flex;
+          }
+        }
+
+        .extra-menu-links-wrapper {
+          padding: 1rem 0rem 0rem 0rem;
+
+          .extra-menu-links {
+            display: flex;
+            cursor: pointer;
+
+            .extra-menu-link {
+              display: inline-flex;
+              align-items: center;
+              margin-right: 1rem;
+              cursor: pointer;
+
+              &:last-child {
+                margin: 0;
+              }
+
+              .extra-menu-link-image {
+                height: 1.8rem;
+                width: 1.8rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 4px;
+                background: #34657f;
+                margin-right: 0.5rem;
+
+                img {
+                }
+              }
+
+              .menu-text {
+                color: #e99f1e;
+              }
+
+              #internet-banking-button {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include minWidth($breakpoint-tablet) {
+      padding: 0 6rem;
+    }
+
+    @include minWidth($breakpoint-desktop) {
+      padding: 0 10rem;
+    }
+  }
+
+  #search-wrapper,
+  #internet-banking-wrapper,
+  #menu-wrapper {
+    display: none;
+    z-index: 10000;
+
+    &.visible {
+      display: flex;
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100vh;
+      width: 100%;
+      background: $transluscent-bg;
+    }
+  }
+
+  #search-wrapper {
+    .mask-contents {
+
+      .input-container {
+        margin: 0 auto;
+        width: 70%;
+
+        input {
+          color: white;
+          border-bottom: 1px solid white;
+          margin: 0;
+        }
+
+        button {
+          border-radius: 0 4px 4px 0;
+        }
+      }
+    }
+  }
+
+
+  #internet-banking-wrapper {
+    .mask-contents {
+      .mask-header {
+        text-align: center;
+      }
+
+      .input-container {
+        width: 70%;
+
+        .internet-banking-modal-button {
+          width: 50%;
+          padding: 2rem 0;
+          font-size: 1.6rem;
+          border: 1px solid black;
+          background: white;
+          color: #4D4C4C;
+          text-align: center;
+          cursor: pointer;
+          
+          &.selected {
+            background: $secondary-color;
+            color: white;
+          }
+
+          &:first-child {
+            border-radius: 4px 0 0 4px;
+          }
+
+          &:last-child {
+            border-radius: 0 4px 4px 0;
+          }
+        }
+      }
+    }
+  }
+
+  #menu-wrapper {
+    .mask {
+      display: none;
+
+      @include minWidth($breakpoint-desktop) {
+        display: flex;
+      }
+    }
+
+    .menu-container {
+      height: 100%;
+      width: 100%;
+
+      @include minWidth($breakpoint-tablet) {
+        padding: 0 4rem;
+      }
+
+      @include minWidth($breakpoint-desktop) {
+        padding: 0 10rem;
+      }
+
+      .menu-items {
+        background: #fff;
+        height: max-content;
+        padding: 0;
+        width: 100%;
+        display: none;
+        margin: 0 auto;
+        border-top: 1px solid #707070;
+        position: relative;
+
+        
+        .menu-close-button {
+          position: absolute;
+          right: 1rem;
+          top: 1rem;
+
+          img {
+            height: 2rem;
+            width: 2rem;
+          }
+        }
+
+        .menu-image {
+          height: 20rem;
+          // width: 18rem;
+          background: black;
+
+          img {
+            height: 100%;
+            width: auto;
+          }
+        }
+
+        .menu-contents {
+          padding: 2.5rem;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+
+          .menu-content-columns {
+            display: flex;
+            flex: 1;
+
+            .menu-content-column {
+              margin-right: 5rem;
+  
+              .column-title {
+                color: #34657F;
+                font-size: 1.3rem;
+                margin-bottom: 0.6rem;
+              }
+  
+              .column-entry {
+                font-size: 0.9rem;
+                margin-bottom: 0.4rem;
+                cursor: pointer;
+  
+                &:hover {
+                  color: #e99f1e;
+                }
+              }
+            }
+          }
+
+          .menu-view-all {
+            text-transform: uppercase;
+            color: $primary-color;
+
+            &:hover {
+              color: $secondary-color;
+            }
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        &.selected {
+          display: flex;
+        }
+      }
+    }
+
+    .mobile-menu-container {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      padding: 9rem 2rem 2rem;
+      background: $gray-bg;
+
+      .mobile-menu-links-wrapper {
+        overflow: scroll;
+        
+        .mobile-menu-links {
+
+          .mobile-menu-link {
+            
+            .mobile-menu-header {
+              cursor: pointer;
+              padding: 0.5rem 0;
+              font-size: 1.5rem;
+              text-transform: uppercase;
+            }
+
+            .mobile-menu-contents {
+              padding: 1rem;
+              display: none;
+              flex-direction: column;
+
+              &.show {
+                display: flex;
+              }
+
+              .menu-content-column {
+                padding-bottom: 0.8rem;
+
+                .column-title {
+                  color: #34657F;
+                  font-size: 1.3rem;
+                  margin-bottom: 0.6rem;
+                }
+    
+                .column-entry {
+                  font-size: 0.9rem;
+                  margin-bottom: 0.4rem;
+                  cursor: pointer;
+    
+                  &:hover {
+                    color: #e99f1e;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @include minWidth($breakpoint-tablet) {
+        padding: 9rem 6rem 2rem 6rem;
+      }
+
+      @include minWidth($breakpoint-desktop) {
+        display: none;
+      }
+    }
+  }
+
+  
+  .mask-contents {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+    .mask-header {
+      width: 70%;
+      margin: 0 auto;
+      padding: 0.8rem 0;
+      font-size: 1.9rem;
+      color: white;
+    }
+
+    @include minWidth($breakpoint-tablet) {
+      padding: 0 4rem;
+    }
+
+    @include minWidth($breakpoint-desktop) {
+      padding: 0 10rem;
+    }
+  }
+}
+
+@keyframes shrink{
+  0%{
+      transform:scale(1);
+  }
+  100%{
+      transform: scale(0.4);
+      opacity: 0;
+      visibility: hidden;
+  }
+}
+
+@keyframes tada{
+0% {
+  -webkit-transform: scale3d(1, 1, 1);
+  -ms-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+
+10%, 20% {
+  -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  -ms-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+}
+
+30%, 50%, 70%, 90% {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  -ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+}
+
+40%, 60%, 80% {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  -ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+}
+
+100% {
+  -webkit-transform: scale3d(1, 1, 1);
+  -ms-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+}

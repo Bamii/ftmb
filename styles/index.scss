@@ -1,0 +1,1064 @@
+@import "header";
+@import "footer";
+@import "common";
+   
+main {
+  padding: 0;
+  max-width: unset;
+}
+
+section {
+  &.bg-left {
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-image: url(/assets/pattern.svg);
+    background-size: 50%;
+    
+    @include minWidth($breakpoint-tablet) {
+      background-size: 30%;
+    }
+  }
+
+  &.bg-right {
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-image: url(/assets/pattern.svg);
+    background-size: 50%;
+    
+    @include minWidth($breakpoint-tablet) {
+      background-size: 30%;
+    }
+  }
+}
+
+#home-banner-section-wrapper {
+  max-width: unset;
+
+  #banner-section {
+   position: relative;
+   height: 100vh;
+   width: 100%;
+   background: #000000;
+   padding: 0;
+   max-width: unset;
+  
+   .banner-slides-container {
+    position: relative;
+    height: 100%;
+     
+    .banner-slides {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+  
+
+      [data-slide="0"] {
+        background-image: url(/assets/Banner_Images/Diaspora.png) !important;
+      }
+
+      [data-slide="1"] {
+        background-image: url(/assets/Banner_Images/loan.png) !important;
+      }
+
+      [data-slide="2"] {
+        background-image: url(/assets/Banner_Images/Fixed_deposit.png) !important;
+      }
+      
+      [data-slide="3"] {
+        background-image: url(/assets/Banner_Images/construct.png) !important;
+      }
+
+      .banner-slide-container {
+        width: 100vw;
+        height: 100%;
+        background: url(/assets/banner.png);
+        background-size: cover;
+        background-position: center;
+  
+        .banner-slide {
+          min-width: 100vw;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 0 2rem;
+          background: $almost-transluscent-bg;
+      
+          .banner-slide-description-container {
+            width: 100%;
+  
+            @keyframes display{
+              0%{
+                opacity: 0;
+              }
+              100%{
+                opacity: 1;
+              }
+            }
+      
+            @include minWidth($breakpoint-tablet) {
+              max-width: 50%;
+  
+              .banner-slide-description {
+                .leading-text {
+                  font-size: 3.5rem !important;
+                }
+        
+                .tagline {
+                  font-size: 1.4rem;
+                }
+              }
+            }
+            
+            .banner-slide-description {
+              height: 100%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              text-align: left;
+              justify-content: flex-start;
+              flex: 1;
+      
+              #banner-large-text {
+                color: $primary-color;
+              }
+
+              #banner-button:hover {
+                padding: 1rem 2.2rem;
+              }
+
+              span {
+                color: white;
+              }
+      
+              .leading-text {
+                font-size: 2rem;
+
+                @include minWidth($breakpoint-tablet) {
+                  font-size: 3rem;
+                }
+              }
+      
+              .tagline {
+                font-size: 1.2rem;
+                padding: 1.5rem 0;  
+              }
+            }
+          }
+            
+          @include minWidth($breakpoint-tablet) {
+            justify-content: space-between;   
+            flex-direction: row;
+            padding: 0 6rem;
+          }
+  
+          @include minWidth($breakpoint-desktop) {
+            flex-direction: row;
+            padding: 0 10rem; 
+          }
+        }
+      }
+    }
+  
+    .banner-slide-controls-container {
+      position: absolute;
+      right: 3vw;
+      bottom: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+  
+      @include minWidth($breakpoint-desktop) {
+        right: 10vw;
+      }
+  
+      #banner-slide-controls {
+        .slide-dot {
+          height: 1rem;
+          width: 1rem;
+          background: white;
+          border: 1px solid $gray-bg;
+          margin: 1rem;
+          cursor: pointer;
+  
+          &.selected  {
+            background: #E99F1E;
+          }
+        }
+      }
+    }
+   }
+  }
+}
+
+#banner-tab-section {
+  padding: 0;
+
+  .banner-info-tab {
+    background: #E1E1E1;
+    z-index: 1000;
+    position: absolute;    
+    top: 42rem;
+    bottom: unset;
+    width: 94vw;
+    left: 3vw;
+    padding: 2rem 0rem 0rem;
+    box-shadow: 0px 15px 30px #0F466573;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @include minWidth($breakpoint-tablet) {
+      flex-direction: row;
+      width: 80vw;
+      left: 10vw;
+      top: unset;
+      bottom: -4.5rem;
+    }
+
+    @include minWidth($breakpoint-desktop) {
+      padding: 2rem 2rem 0rem 0rem;
+      width: 70vw;
+      left: 15vw;
+      bottom: -5.5rem;
+    }
+  
+    .banner-info-tab-row {
+      display: flex;
+      justify-content: space-around;
+      flex: 1;
+      margin: 2rem 0;
+      
+      .banner-info-item {
+        width: 25%;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+
+        &:hover {
+          .banner-info-item-icon {
+            .icon {
+              svg {
+                .b {
+                  fill: $secondary-color;
+                }
+              }
+            }
+          }
+
+          .banner-info-item-text {
+            color: $secondary-color;
+          }
+        }
+
+        @include minWidth($breakpoint-desktop) {
+          flex-direction: row;
+        }
+
+        .banner-info-item-icon {
+          position: relative;
+
+          .bg {
+            img {
+              width: 4rem;
+            }
+          }
+
+          .icon {
+            position: absolute;
+            right: 1rem;
+            bottom: 0rem;
+
+            @include minWidth($breakpoint-desktop) {
+              right: -1rem;
+            }
+
+            svg {
+              width: 4rem;
+
+              .b {
+                fill: $primary-color;
+              }
+            }
+          }
+        }
+
+        .banner-info-item-text {
+          margin-top: 0.5rem;
+          text-transform: uppercase;
+          text-align: left;
+          font-weight: 500;
+          color: $primary-color;
+          
+          @include minWidth($breakpoint-desktop) {
+            margin-top: -0.5rem;
+            margin-left: 1.6rem;
+            right: 0rem;
+          }
+        }
+      }
+    }
+   }  
+}
+
+#about-us-section {
+  padding-top: 8rem;
+
+  @include minWidth($breakpoint-tablet) {
+    padding-top: 0rem;
+  }
+
+  .row-half {
+    width: 100%;
+  }
+
+  .left {
+    align-self: flex-start;
+
+    img {
+      width: 100%;
+
+      @include minWidth($breakpoint-desktop) {
+        width: 40rem;
+      }
+    }
+  }
+
+  .right {
+    padding-top: 0;
+
+    @include minWidth($breakpoint-tablet) {
+      padding-top: 12rem;
+    }
+
+    .row-contents {
+      display: flex;
+      flex-direction: column;
+      max-width: 25rem;
+    }
+
+    .action-button {
+      margin: 1rem 0;
+      text-align: right;
+    }
+  }
+}
+
+#offerings-section-wrapper {
+  #offerings-section { 
+    .left {
+      @include minWidth($breakpoint-desktop) {
+        padding-top: 2.5rem;
+      }
+  
+      .top-accent {
+        margin: 1rem 0; 
+        border: 1px solid #E99F1E;
+        width: 60%;
+      }
+  
+      .offerings-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        @include minWidth($breakpoint-desktop) {
+          flex-direction: row;  
+        }
+  
+        .offering-container {
+          width: 100%;
+          height: 200px;
+          margin: 0.5rem 0;
+          border: 1px solid #707070;
+          border-radius: 8px;
+          background-position: center;
+          background-size: 130%;
+  
+          &.one {
+            background-image: url(/assets/pig.png);
+          }
+          
+          &.two {
+            background-image: url(/assets/pen.png);
+          }
+  
+          &.three {
+            background-image: url(/assets/woman.png);
+          }
+  
+          &:hover {
+            box-shadow: 0px 0px 6px -1px #272727;
+          }
+  
+          .offering {
+            border-radius: 8px;
+            height: 100%;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column; 
+            justify-content: space-between;
+            background: $almost-transluscent-bg;
+  
+            .number {
+              align-self: flex-end;
+              font-size: 2.5rem;
+              color: #E99F1E;
+            }
+  
+            .description {  
+              .offering-text {
+                font-size: 0.9rem;
+                color: white;
+              }
+            }
+          }
+     
+  
+          @include minWidth($breakpoint-desktop) {
+            margin: 0.5rem; 
+            height: 400px;
+            width: 33%;
+          }
+        }
+      }
+    }
+  
+    .right {
+      align-self: flex-start;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+#entertainment-section {
+  display: flex;
+  flex-direction: column;
+
+  @include minWidth($breakpoint-desktop) {
+    padding: 4rem 10rem;
+  }
+  
+  .section-header {
+    display: flex;
+    align-items: flex-end;
+
+    .top-accent-container {
+      flex: 1;
+      padding: 2rem 3rem;
+
+      .top-accent {
+        width: 60%;
+        margin: 1rem 0; 
+        border: 1px solid #E99F1E;
+      }
+    }
+
+  }
+
+  section {
+    align-items: flex-start;
+    padding: 0;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .right {
+      .video-container {
+        iframe {
+          box-shadow: 0px 0px 4px -1px #272727;
+          border-radius: 8px;
+          
+          &:hover {
+            box-shadow: 0px 0px 6px -1px #272727;
+          }
+        }
+      }
+    }
+
+    .master {
+      flex: 3;
+    }
+  }
+}
+
+#loan-section-wrapper {
+  #loan-calculator-section {
+    .left {
+      width: 100%;
+      
+      .loan-calculator-card {
+        min-width: 60%;
+        padding: 1.8rem;
+        width: 100%;
+        box-shadow: 0px 0px 4px -1px #272727;
+        background: white;
+  
+        &:hover {
+          box-shadow: 0px 0px 7px -1px #272727;
+        }
+  
+        @include minWidth($breakpoint-tablet) {
+          width: auto;
+        }
+  
+        @include minWidth($breakpoint-desktop) {
+          padding: 3rem;
+        }
+  
+        div {
+          width: 100%;
+          height: auto;
+        }
+  
+        .interest-rate {
+          text-align: left;
+          padding-left: 2rem;
+          padding-bottom: 0.5rem;
+          font-size: 0.8rem;
+        }
+  
+        .buttons-container {
+          padding: 1rem 0 0.5rem 0;
+          display: flex;
+          justify-content: flex-end;
+          width: 100%;
+  
+          div {
+            flex: 1;
+          }
+  
+          button {
+            font-weight: bold;
+            letter-spacing: 1.2px;
+          }
+        }
+      }  
+    }
+  
+    .right {
+      align-self: flex-start;
+      display: flex;
+      flex-direction: column;
+  
+      .section-header-container {
+        .prepared-container {
+          display: flex;
+          align-items: center;
+  
+          .top-accent {
+            width: 15rem;
+            border: 1px solid $secondary-color;
+            margin-right: 1rem;
+            display: none;
+  
+            @include minWidth($breakpoint-tablet) {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#services-section{
+  @include minWidth($breakpoint-desktop) {
+    padding: 4rem 10rem;
+  }
+  
+  .section-header {
+    display: flex;
+    // padding: 4rem 6rem;
+    flex-direction: column;
+    
+    span {
+      text-align: right;
+    }
+  }
+
+  .services-section-body {
+    display: flex;
+    flex-direction: column;
+
+    @include minWidth($breakpoint-tablet) {
+      flex-direction: row;
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      flex: 1;
+
+      .service-card {
+        width: 100%;
+        padding: 1rem;
+        margin: 1rem 0;
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        background: $gray-bg;
+        
+        &:hover {
+          box-shadow: 0px 0px 4px -1px #272727;
+        }
+
+        .service-card-image {
+          height: auto;
+          width: 300px;
+          border-radius: 4px;
+
+          img {
+            height: auto;
+            width: 100%;
+          }
+        }
+
+        .service-card-details {
+          display: flex;
+          padding: 1rem 1rem 0 1rem;
+          flex-direction: column;
+          justify-content: center;
+
+          .small-text {
+            font-size: 0.6rem; //0.6
+          }
+
+          .service-card-title {
+            font-weight: bold;
+            padding: 0.6rem 0;
+            font-size: 1.1rem; //1
+          }
+
+          .service-card-description {
+            font-size: 0.8rem; //0.8
+          }
+
+          .service-card-action {
+            text-align: right;
+
+            button {
+              font-size: 0.6rem;
+            }
+          }
+
+          @include minWidth($breakpoint-tablet) {
+            .small-text {
+              font-size: 0.6rem; //0.6
+            }
+    
+            .service-card-title {
+              padding: 0.6rem 0;
+              font-size: 1rem; //1
+            }
+    
+            .service-card-description {
+              font-size: 0.8rem; //0.8
+            }
+          }
+
+          @include minWidth($breakpoint-desktop) {
+            .service-card-title {
+              padding: 0.6rem 0;
+              font-size: 1.2rem; //1
+            }
+    
+            .service-card-description {
+              font-size: 0.9rem; //0.8
+            }
+    
+            .service-card-action {
+              text-align: right;
+            }
+          }
+        }
+      }
+
+      @include minWidth($breakpoint-tablet) {
+        flex-direction: row;
+        justify-content: center;
+
+        .service-card {
+          width: 40%; 
+          margin: 0 1.5rem 1.5rem 0;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      padding: 1.5rem 0;
+
+      .all-service {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        cursor: pointer;
+        text-align: center;
+
+        .icon {
+          img {
+            height: 40px;
+            width: 40px;
+          }
+
+          padding: 0.5rem 0;
+        }
+
+        .text {
+          font-weight: $emphasis-font;
+        }
+
+        &:hover {
+          .icon {
+            img {
+              fill: $secondary-color;
+            }
+          }
+
+          .text {
+            color: $secondary-color;
+          }
+        }
+      }
+
+      @include minWidth($breakpoint-tablet) {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+#faq-section {
+  div {
+    text-align: right;
+  }
+
+  &.section-container {
+    @include minWidth($breakpoint-tablet) {
+      padding-left: 0;
+    }
+  }
+
+  .left {
+    padding-right: 0;
+  }
+
+  .right {
+    .input-container {
+      svg {
+        fill: $secondary-color;
+      }
+    }
+    .button-container {
+      width: 100%;
+      text-align: right;
+    }
+  }
+
+  .comments {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include minWidth($breakpoint-tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .comment {
+      width: 90%;
+      background: $gray-bg;
+      padding: 5rem 1rem 1rem 1rem;
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 0;
+      position: relative;
+      box-shadow: 0px 0px 2px 0px #DDDDDD;
+
+      @include minWidth($breakpoint-tablet) {
+        margin: 0;
+      }
+
+      .comment-image {
+        position: absolute;
+        right: -30px;
+        top: -30px;
+        height: 80px;
+        width: 80px;
+        background: white;
+        border-radius: 50%;
+        padding: 2px;
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      .comment-title {
+        text-align: left;
+        padding: 1rem 0;
+        color: #E99F1E;
+        letter-spacing: 0.48px;
+        font-size: 0.95rem;
+      }
+
+      .comment-body {
+        text-align: left;
+        padding: 0 0 2rem 0;
+      }
+
+      .comment-button {
+        button {
+          font-size: 0.8rem;
+          padding-right: 0;
+        }
+      }
+
+      @include minWidth($breakpoint-tablet) {
+        // flex: 1;
+        margin: 0 40px 40px 0;
+        width: 210px;
+      }
+
+      @include minWidth($breakpoint-desktop) {
+        flex: 1;
+        margin-right: 40px;
+      }
+    }
+  }
+}
+
+#loan-calculator-modal {
+  .mask {
+    .mask-contents {
+      div {
+        img {
+          width: 20px;
+        }
+      }
+      
+      td {
+        img {
+          width: 15px;
+        }
+      }
+
+      .mask-header {
+        text-align: center;
+
+        .small-text {
+          font-size: 0.9rem;
+        }
+
+        .monthly-payments {
+          font-size: 2.3rem;
+          font-weight: bold;
+
+          @include minWidth($breakpoint-desktop) {
+            font-size: 2.5rem;
+          }
+        }
+      }
+
+      .calculator-table {
+        padding: 1rem 0;
+        width: 100%;
+
+        table {
+          width: 100%;
+
+          tbody {
+            tr:nth-child(1) {
+              td {
+                border-bottom: 1px solid #70707080;
+              }
+            }
+          }
+
+          tbody,
+          tfoot {
+            td {
+              padding: 0.5rem 0;
+            }
+
+            td:nth-child(2) {
+              text-align: right;
+            }
+          }
+
+          tfoot {
+            font-size: 1.2rem;
+
+            @include minWidth($breakpoint-desktop) {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+
+      .interest-and-tenor {
+        padding: 1.3rem 0 2rem 0;
+        display: flex;
+        font-size: 0.8rem;
+
+        .interest-rate,
+        .tenor {
+          padding-right: 0.8rem;
+
+          span {
+            color: $secondary-color;
+          }
+        }
+      }
+      
+      .disclaimer {
+        font-size: 0.8rem;
+        .disclaimer-title {
+          color: $secondary-color;
+          padding: 0.3rem 0;
+        }
+      }
+    }
+  }
+}
+
+#faq-search-modal {
+  .mask {
+    .mask-contents {
+      .mask-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 1rem 0 2rem 0;
+
+        svg {
+          fill: $secondary-color;
+          height: auto;
+          width: 30px;
+          margin-right: 1rem;
+        }
+      }
+
+      .answer-section {
+        display: flex;
+
+        .left,
+        .right {
+          padding: 0 1rem;
+        }
+
+        .left {
+          svg {
+            fill: $secondary-color;
+            width: 30px;
+            height: auto;
+            padding: 0.5rem 0;
+          }
+        }
+
+        .right {
+          flex: 1;
+
+          .answer-header {
+            border-bottom: 1px solid $gray-bg;
+            padding: 1rem 0;
+            font-weight: bold;
+          }
+
+          .answer-description {
+            padding: 1rem 1rem 2rem 1rem;
+            border: 1px solid $gray-bg;
+          }
+        }
+      }
+
+      .accordion-section {
+        padding: 1rem;
+
+        .accordion-row {
+          .accordion-title {
+            cursor: pointer;
+            width: 100%;
+            padding: 1rem 0;
+            border-bottom: 1px solid $gray-bg;
+            display: flex;
+            justify-content: space-between;
+  
+            .icon {
+              font-size: 1rem;
+              color: $secondary-color;
+            }
+          }
+          
+          .accordion-content {
+            width: 100%;
+            display: none;
+            padding: 1rem 1rem 2rem 1rem;
+
+            &.visible {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#faq-search-modal,
+#loan-calculator-modal {
+  display: none;
+  z-index: 10000;
+
+  &.visible {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background: $transluscent-bg;
+  }
+
+  .mask {
+    align-items: center;
+
+    .mask-contents {
+      width: 90%;
+      margin: 0 auto;
+      background: white;
+      padding: 2.5rem;
+      border-radius: 4px;
+      max-height: 70vh;
+      overflow-y: scroll;
+
+      @include minWidth($breakpoint-tablet) {
+        padding: 3rem;
+        width: 70%
+      }
+
+      @include minWidth($breakpoint-desktop) {
+        width: 50%;
+      }
+    }
+  }
+
+}
+

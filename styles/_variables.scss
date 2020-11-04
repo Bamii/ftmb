@@ -1,0 +1,28 @@
+$primary_color: #0F4665;
+$secondary-color: #E99F1E;
+$font-color: #333431;
+$gray-bg: #F0EFEF;
+$breakpoint-tablet: 760px;
+$breakpoint-mobile: 420px;
+$breakpoint-desktop: 1024px;
+$emphasis-font: 'Roboto Condensed', sans-serif;
+$topbar-height: 10;
+$transluscent-bg: rgba(16, 17, 20, 0.8);
+$almost-transluscent-bg: rgba(16, 17, 20, 0.3);
+
+@mixin maxWidth($arg) {
+  @media screen and (max-width: $arg) {
+      @content;
+  }
+}
+
+@mixin minWidth($arg) {
+  @media screen and (min-width: $arg) {
+      @content;
+  }
+}
+
+@mixin generalWidth {
+  max-width: 1440px;
+  margin: 0 auto;
+}
