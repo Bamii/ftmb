@@ -22,7 +22,8 @@ window.onload = function () {
   const internetBankingButton = document.getElementById("internet-banking-button");
   const internetBankingClose = document.getElementById("internet-banking-close");
   const internetBankingWrapper = document.getElementById("internet-banking-wrapper");
-  const internetBankingModalButtons = document.getElementsByClassName("internet-banking-modal-button")
+  const internetBankingModalButtons = document.getElementsByClassName("internet-banking-modal-button");
+  const infoTabInternetBanking = document.getElementById("info-tab-internet-banking");
   
   const loanCalculatorCloseButton = document.getElementById("loan-calculator-close");
   const loanCalculatorModal = document.getElementById("loan-calculator-modal");
@@ -77,6 +78,7 @@ window.onload = function () {
       document.querySelector(`[data-accordion-content="${index}"]`).classList.toggle("visible");
     }
   });
+
   mobileMenu.onclick = function(e) {
     openMobileMenu();
   }
@@ -110,6 +112,13 @@ window.onload = function () {
   }
 
   internetBankingButton.onclick = function() {
+    isMenuOpen = false;
+    menuWrapper.classList.remove("visible");
+    internetBankingWrapper.classList.toggle("visible");
+    searchWrapper.classList.remove("visible");
+  }
+
+  infoTabInternetBanking.onclick = function() {
     isMenuOpen = false;
     menuWrapper.classList.remove("visible");
     internetBankingWrapper.classList.toggle("visible");

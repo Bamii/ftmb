@@ -278,7 +278,7 @@ section{
     overflow-y: hidden;
     width:100%;
     background-size: cover;
-    background-image:linear-gradient(to bottom right, rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/Rental.jpg);
+    background-image:linear-gradient(to bottom right, rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(/images/Rental.jpg);
     background-position: center;
     background-attachment: fixed;
     header{
@@ -1072,7 +1072,7 @@ section{
     .pro{
         //padding: 0 100px;
         margin-top:70px;
-        background-image: url(images/Accounting.svg);
+        background-image: url(/images/Accounting.svg);
 //        .two{
 //            .cont{
 //                float:left;
@@ -1436,25 +1436,25 @@ section{
         .image{
             width:100%;
             height:300px;
-            background-image: url(images/Loans.png);
+            background-image: url(/images/Loans.png);
             background-position: center;
             background-size:cover;
         }
         .image_two{
             @extend .image;
-             background-image: url(images/Savings.jpg);
+             background-image: url(/images/Savings.jpg);
         }
         .image_three{
             @extend .image;
-             background-image: url(images/Rental.jpg);
+             background-image: url(/images/Rental.jpg);
         }
         .image_four{
             @extend .image;
-             background-image: url(images/realty%20Finance.jpg);
+             background-image: url(/images/realty%20Finance.jpg);
         }
         .image_five{
             @extend .image;
-             background-image: url(images/Savings.jpg);
+             background-image: url(/images/Savings.jpg);
         }
         p{
             color:$theme-grey;
@@ -1609,7 +1609,7 @@ section{
     }
 }
 .who-we-are{
-    background-image: url(images/About-Us.png);
+    background-image: url(/images/About-Us.png);
     height:500px;
     width:100%;
     background-position: center;
@@ -1865,23 +1865,23 @@ section{
             height:inherit;
             transition:0.2s ease-in;
             padding: 20px 20px 10px 20px;
-            background-color: $theme-blue;
-            color:#fff;
+            background-color: $gray-bg;
+            color: $primary-color;
             h3{
                 font-size:18px;
                 font-weight: 500;
             }
             p{
                 font-size:12px;
-                color:#f0f0f0;
+                // color:#f0f0f0;
                 margin-top: 20px;
             }
             .footer{
                 text-transform: uppercase;
                 font-weight: 500;
                 i{
-                    background-color:#fff;
-                    color:$theme-blue;
+                    background-color: $secondary-color;
+                    color: #fff;
                     border-radius: 100%;
                     font-size:12px;
                     cursor: pointer;
@@ -1976,7 +1976,7 @@ section{
 // Loan and Mortages Page
 .loanMortages {
     @extend section;
-    background-image: linear-gradient(to bottom right, rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/Mortgages-II.png);
+    background-image: linear-gradient(to bottom right, rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/images/Mortgages-II.png);
     height:400px;
     position: relative;
     background-position: top;
@@ -2062,7 +2062,7 @@ section{
             background-color:$theme-white;
             border-radius: 3px;
             .image_1{
-                background-image:url(images/Rent%20Loan%203.png);
+                background-image:url(/images/Rent%20Loan%203.png);
                 background-size: cover;
                 background-position: center;
                 height:180px;
@@ -2070,7 +2070,7 @@ section{
             }
             .image_2{
                 @extend .image_1;
-                background-image:url(images/Short%20term%20loan%202.png);;
+                background-image:url(/images/Short%20term%20loan%202.png);;
             }
             .text{
                 padding: 15px;
@@ -2095,7 +2095,7 @@ section{
                     color:$theme-white;
                     font-weight:500;
                     border:none;
-                    background-color: $theme-blue;
+                    background-color: $secondary-color;
                     border-radius:4px;
                 }
                 .read{
@@ -2211,7 +2211,7 @@ section{
 //Reant Loan Page
 .rentLoan{
     @extend .loanMortages;
-    background-image: linear-gradient(to bottom right, rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/Rent%20Loan%203.png);
+    background-image: linear-gradient(to bottom right, rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/images/Rent%20Loan%203.png);
     background-size: cover;
     background-position: center;
     @media only screen and (max-width:320px){
@@ -2541,7 +2541,7 @@ section{
         .image{
             width:100%;
             height:250px;
-            background-image: url(images/Rent%20Loan%203.png);
+            background-image: url(/images/Rent%20Loan%203.png);
             background-position: center;
             background-size:cover;
         }
@@ -2562,7 +2562,7 @@ section{
                     width:90px;
                     border-radius:100px;
                     margin:20px auto;
-                    background-image: url(images/Korede%20ceo.jpg);
+                    background-image: url(/images/Korede%20ceo.jpg);
                     background-position: top;
                     background-size: cover;
                 }
@@ -2882,7 +2882,7 @@ section{
             .avatar{
                 width:100%;
                 height: 365px;
-                background-image: url(images/img_avatar.png);
+                background-image: url(/images/img_avatar.png);
                 background-position: top;
                 background-size: cover;
             }
@@ -3203,7 +3203,7 @@ section{
 .post-footer-contact{
     width:100%;
     height:150px;
-    background-image: linear-gradient(rgba(56, 94, 112,0.6),rgba(56, 94, 112,0.6)),url(images/contact-footer.jpg);
+    background-image: linear-gradient(rgba(56, 94, 112,0.6),rgba(56, 94, 112,0.6)),url(/images/contact-footer.jpg);
     background-size:cover;
     .social-media{
         width:30%;
@@ -3281,7 +3281,7 @@ section{
                 .head{
                     width:100%;
                     height:200px;
-                    background-image: url(images/Bitmap@2x.png);
+                    background-image: url(/images/Bitmap@2x.png);
                 }
                 span{
                     color:#b0b0b0;
@@ -3328,7 +3328,7 @@ section{
                         width:20%;
                         height: 130px;
                         float:left;
-                        background-image: url(images/Investors%20Relations@2x.png);
+                        background-image: url(/images/Investors%20Relations@2x.png);
                     }
                     .text{
                         width:78%;
@@ -3417,22 +3417,22 @@ section{
                 .first-image{
                     width:100%;
                     height:100%;
-                    background-image: url(images/image.png)
+                    background-image: url(/images/image.png)
                 }
                 .second-image{
                     width:100%;
                     height: 100%;
-                    background-image: url(images/Mask%20Group%2032.png)
+                    background-image: url(/images/Mask%20Group%2032.png)
                 }
                 .third-image{
                     width:100%;
                     height:100%;
-                    background-image: url(images/Mask%20Group%2031.png)
+                    background-image: url(/images/Mask%20Group%2031.png)
                 }
                 .fourth-image{
                     width:100%;
                     height:100%;
-                    background-image: url(images/Mask%20Group%2034.png)
+                    background-image: url(/images/Mask%20Group%2034.png)
                 }
             }
             .video-div{
@@ -3729,3 +3729,8 @@ section{
     }
 }
 
+.image_1 > img,
+.image_2 > img {
+    height: 100%;
+    width: 100%;
+}

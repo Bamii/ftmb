@@ -84,7 +84,7 @@ section {
           justify-content: center;
           align-items: center;
           padding: 0 2rem;
-          background: $almost-transluscent-bg;
+          background: rgba(16, 17, 20, 0.1);
       
           .banner-slide-description-container {
             width: 100%;
@@ -136,6 +136,7 @@ section {
       
               .leading-text {
                 font-size: 2rem;
+                line-height: 1.3;
 
                 @include minWidth($breakpoint-tablet) {
                   font-size: 3rem;
@@ -143,8 +144,9 @@ section {
               }
       
               .tagline {
+                color: #4D4C4C;
                 font-size: 1.2rem;
-                padding: 1.5rem 0;  
+                padding: 1.5rem 0;
               }
             }
           }
@@ -198,7 +200,7 @@ section {
   padding: 0;
 
   .banner-info-tab {
-    background: #E1E1E1;
+    background: $gray-bg;
     z-index: 1000;
     position: absolute;    
     top: 42rem;
@@ -291,7 +293,8 @@ section {
           margin-top: 0.5rem;
           text-transform: uppercase;
           text-align: left;
-          font-weight: 500;
+          font-weight: bold;
+          letter-spacing: 0.6px;
           color: $primary-color;
           
           @include minWidth($breakpoint-desktop) {
@@ -719,6 +722,8 @@ section {
 
         .text {
           font-weight: $emphasis-font;
+          text-transform: uppercase;
+          font-size: 0.8rem;
         }
 
         &:hover {

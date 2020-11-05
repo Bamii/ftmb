@@ -1268,6 +1268,67 @@ main {
   }
 }
 
+#banner-container #cash-backed-banner {
+  background-image: url("/assets/Product_Images/Cash Backed.png");
+  background-position: bottom;
+}
+
+#banner-container #csa-banner {
+  background-image: url("/assets/Product_Images/Children Savings Account.png");
+}
+
+#banner-container #construction-finance-banner {
+  background-image: url("/assets/Product_Images/Construction Finance.png");
+}
+
+#banner-container #construction-mortgage-banner {
+  background-image: url("/assets/Product_Images/construction Mortgage.png");
+}
+
+#banner-container #diaspora-mortgage-banner {
+  background-image: url("/assets/Product_Images/Diaspora Mortgage.png");
+}
+
+#banner-container #endowment-savings-banner {
+  background-image: url("/assets/Product_Images/Endowment Savings Account.png");
+}
+
+#banner-container #equity-release-banner {
+  background-image: url("/assets/Product_Images/Equity Release.png");
+}
+
+#banner-container #home-improvement-banner {
+  background-image: url("/assets/Product_Images/Home Improvement Refinance.png");
+}
+
+#banner-container #home-mortgage-banner {
+  background-image: url("/assets/Product_Images/Home Mortgage Refinance.png");
+}
+
+#banner-container #homa-banner {
+  background-image: url("/assets/Product_Images/Home Ownership Mortgage Account.png");
+}
+
+#banner-container #val-mortgage-banner {
+  background-image: url("/assets/Product_Images/I Val Mortgage.png");
+}
+
+#banner-container #land-micro-mortgage-banner {
+  background-image: url("/assets/Product_Images/Land Acquisition.png");
+}
+
+#banner-container #outright-purchase-banner {
+  background-image: url("/assets/Product_Images/Outright Purchase.png");
+}
+
+#banner-container #shortterm-loan-banner {
+  background-image: url("/assets/Product_Images/ShortTerm Loan.png");
+}
+
+#banner-container #target-savings-banner {
+  background-image: url("/assets/Product_Images/Target Savings.png");
+}
+
 *,
 *:after,
 *:before {
@@ -1783,8 +1844,8 @@ section, .loanMortages, .rentLoan {
   overflow-y: hidden;
   width: 100%;
   background-size: cover;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(images/Rental.jpg);
-  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Rental.jpg);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(/images/Rental.jpg);
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/Rental.jpg);
   background-position: center;
   background-attachment: fixed;
 }
@@ -2682,7 +2743,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 
 .why .pro {
   margin-top: 70px;
-  background-image: url(images/Accounting.svg);
+  background-image: url(/images/Accounting.svg);
 }
 
 .why .pro .cancel {
@@ -3057,25 +3118,25 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 .everything .tabcontent .image, .everything .tabcontent .image_two, .everything .tabcontent .image_three, .everything .tabcontent .image_four, .everything .tabcontent .image_five {
   width: 100%;
   height: 300px;
-  background-image: url(images/Loans.png);
+  background-image: url(/images/Loans.png);
   background-position: center;
   background-size: cover;
 }
 
 .everything .tabcontent .image_two {
-  background-image: url(images/Savings.jpg);
+  background-image: url(/images/Savings.jpg);
 }
 
 .everything .tabcontent .image_three {
-  background-image: url(images/Rental.jpg);
+  background-image: url(/images/Rental.jpg);
 }
 
 .everything .tabcontent .image_four {
-  background-image: url(images/realty%20Finance.jpg);
+  background-image: url(/images/realty%20Finance.jpg);
 }
 
 .everything .tabcontent .image_five {
-  background-image: url(images/Savings.jpg);
+  background-image: url(/images/Savings.jpg);
 }
 
 .everything .tabcontent p {
@@ -3236,7 +3297,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .who-we-are {
-  background-image: url(images/About-Us.png);
+  background-image: url(/images/About-Us.png);
   height: 500px;
   width: 100%;
   background-position: center;
@@ -3512,8 +3573,8 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
   padding: 20px 20px 10px 20px;
-  background-color: #385E70;
-  color: #fff;
+  background-color: #F0EFEF;
+  color: #0F4665;
 }
 
 .helpful-tool .col-md-4 .inn h3 {
@@ -3523,7 +3584,6 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 
 .helpful-tool .col-md-4 .inn p {
   font-size: 12px;
-  color: #f0f0f0;
   margin-top: 20px;
 }
 
@@ -3533,8 +3593,8 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .helpful-tool .col-md-4 .inn .footer i {
-  background-color: #fff;
-  color: #385E70;
+  background-color: #E99F1E;
+  color: #fff;
   border-radius: 100%;
   font-size: 12px;
   cursor: pointer;
@@ -3619,8 +3679,8 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .loanMortages, .rentLoan {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(images/Mortgages-II.png);
-  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/Mortgages-II.png);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/images/Mortgages-II.png);
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/Mortgages-II.png);
   height: 400px;
   position: relative;
   background-position: top;
@@ -3721,7 +3781,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .loan-content .col-md-3 .inside .image_1, .mortgage-content .col-md-3 .inside .image_1, .loan-content .col-md-3 .inside .image_2, .mortgage-content .col-md-3 .inside .image_2 {
-  background-image: url(images/Rent%20Loan%203.png);
+  background-image: url(/images/Rent%20Loan%203.png);
   background-size: cover;
   background-position: center;
   height: 180px;
@@ -3729,7 +3789,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .loan-content .col-md-3 .inside .image_2, .mortgage-content .col-md-3 .inside .image_2 {
-  background-image: url(images/Short%20term%20loan%202.png);
+  background-image: url(/images/Short%20term%20loan%202.png);
 }
 
 .loan-content .col-md-3 .inside .text, .mortgage-content .col-md-3 .inside .text {
@@ -3759,7 +3819,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
   color: #f7f7f7;
   font-weight: 500;
   border: none;
-  background-color: #385E70;
+  background-color: #E99F1E;
   border-radius: 4px;
 }
 
@@ -3856,8 +3916,8 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .rentLoan {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(images/Rent%20Loan%203.png);
-  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/Rent%20Loan%203.png);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/images/Rent%20Loan%203.png);
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/Rent%20Loan%203.png);
   background-size: cover;
   background-position: center;
 }
@@ -4246,7 +4306,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 .about_us .tabcontent .image, .about_us .everything .tabcontent .image_two, .everything .about_us .tabcontent .image_two, .about_us .everything .tabcontent .image_three, .everything .about_us .tabcontent .image_three, .about_us .everything .tabcontent .image_four, .everything .about_us .tabcontent .image_four, .about_us .everything .tabcontent .image_five, .everything .about_us .tabcontent .image_five {
   width: 100%;
   height: 250px;
-  background-image: url(images/Rent%20Loan%203.png);
+  background-image: url(/images/Rent%20Loan%203.png);
   background-position: center;
   background-size: cover;
 }
@@ -4272,7 +4332,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
   width: 90px;
   border-radius: 100px;
   margin: 20px auto;
-  background-image: url(images/Korede%20ceo.jpg);
+  background-image: url(/images/Korede%20ceo.jpg);
   background-position: top;
   background-size: cover;
 }
@@ -4590,7 +4650,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 .thetoggleTabs .tab-pane .imaggge .avatar {
   width: 100%;
   height: 365px;
-  background-image: url(images/img_avatar.png);
+  background-image: url(/images/img_avatar.png);
   background-position: top;
   background-size: cover;
 }
@@ -4906,8 +4966,8 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 .post-footer-contact {
   width: 100%;
   height: 150px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(56, 94, 112, 0.6)), to(rgba(56, 94, 112, 0.6))), url(images/contact-footer.jpg);
-  background-image: linear-gradient(rgba(56, 94, 112, 0.6), rgba(56, 94, 112, 0.6)), url(images/contact-footer.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(56, 94, 112, 0.6)), to(rgba(56, 94, 112, 0.6))), url(/images/contact-footer.jpg);
+  background-image: linear-gradient(rgba(56, 94, 112, 0.6), rgba(56, 94, 112, 0.6)), url(/images/contact-footer.jpg);
   background-size: cover;
 }
 
@@ -5014,7 +5074,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 .medially .row .col-md-8 .medial .head, .medially .row .rentLoan_content .col-md-3 .medial .head, .rentLoan_content .medially .row .col-md-3 .medial .head {
   width: 100%;
   height: 200px;
-  background-image: url(images/Bitmap@2x.png);
+  background-image: url(/images/Bitmap@2x.png);
 }
 
 .medially .row .col-md-8 .medial span, .medially .row .rentLoan_content .col-md-3 .medial span, .rentLoan_content .medially .row .col-md-3 .medial span {
@@ -5066,7 +5126,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
   width: 20%;
   height: 130px;
   float: left;
-  background-image: url(images/Investors%20Relations@2x.png);
+  background-image: url(/images/Investors%20Relations@2x.png);
 }
 
 .medially .row .col-md-8 .newy .first .text, .medially .row .rentLoan_content .col-md-3 .newy .first .text, .rentLoan_content .medially .row .col-md-3 .newy .first .text, .medially .row .col-md-8 .gallery .first .text, .medially .row .rentLoan_content .col-md-3 .gallery .first .text, .rentLoan_content .medially .row .col-md-3 .gallery .first .text, .medially .row .col-md-8 .video-div .first .text, .medially .row .rentLoan_content .col-md-3 .video-div .first .text, .rentLoan_content .medially .row .col-md-3 .video-div .first .text, .medially .row .col-md-8 .document .first .text, .medially .row .rentLoan_content .col-md-3 .document .first .text, .rentLoan_content .medially .row .col-md-3 .document .first .text {
@@ -5177,25 +5237,25 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 .medially .row .col-md-8 .gallery .first-image, .medially .row .rentLoan_content .col-md-3 .gallery .first-image, .rentLoan_content .medially .row .col-md-3 .gallery .first-image {
   width: 100%;
   height: 100%;
-  background-image: url(images/image.png);
+  background-image: url(/images/image.png);
 }
 
 .medially .row .col-md-8 .gallery .second-image, .medially .row .rentLoan_content .col-md-3 .gallery .second-image, .rentLoan_content .medially .row .col-md-3 .gallery .second-image {
   width: 100%;
   height: 100%;
-  background-image: url(images/Mask%20Group%2032.png);
+  background-image: url(/images/Mask%20Group%2032.png);
 }
 
 .medially .row .col-md-8 .gallery .third-image, .medially .row .rentLoan_content .col-md-3 .gallery .third-image, .rentLoan_content .medially .row .col-md-3 .gallery .third-image {
   width: 100%;
   height: 100%;
-  background-image: url(images/Mask%20Group%2031.png);
+  background-image: url(/images/Mask%20Group%2031.png);
 }
 
 .medially .row .col-md-8 .gallery .fourth-image, .medially .row .rentLoan_content .col-md-3 .gallery .fourth-image, .rentLoan_content .medially .row .col-md-3 .gallery .fourth-image {
   width: 100%;
   height: 100%;
-  background-image: url(images/Mask%20Group%2034.png);
+  background-image: url(/images/Mask%20Group%2034.png);
 }
 
 .medially .row .col-md-8 .video-div .video, .medially .row .rentLoan_content .col-md-3 .video-div .video, .rentLoan_content .medially .row .col-md-3 .video-div .video {
@@ -5453,5 +5513,11 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
   .medially .row .col-md-3 {
     display: none;
   }
+}
+
+.image_1 > img, .loan-content .col-md-3 .inside .image_2 > img, .mortgage-content .col-md-3 .inside .image_2 > img,
+.image_2 > img {
+  height: 100%;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
