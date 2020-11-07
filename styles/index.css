@@ -2310,10 +2310,6 @@ section.bg-right {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  #faq-section .feeds .feeds-header {
-    padding-right: 1rem;
-    padding-bottom: 0;
-  }
 }
 
 #faq-section .feeds .feeds-header {
@@ -2326,7 +2322,15 @@ section.bg-right {
 }
 
 #faq-section .feeds .feeds-header span {
+  font-family: inherit;
   color: #0F4665;
+}
+
+@media screen and (min-width: 760px) {
+  #faq-section .feeds .feeds-header {
+    padding-bottom: 0;
+    padding-right: 1rem;
+  }
 }
 
 #faq-section .feeds .feeds-body {

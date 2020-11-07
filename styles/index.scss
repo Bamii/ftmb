@@ -782,11 +782,6 @@ section {
     @include minWidth($breakpoint-tablet) {
       flex-direction: row;
       justify-content: space-between;
-
-      .feeds-header {
-        padding-right: 1rem;
-        padding-bottom: 0;
-      }
     }
 
     .feeds-header {
@@ -798,7 +793,13 @@ section {
       padding-bottom: 1rem;
 
       span {
+        font-family: inherit;
         color: $primary-color;
+      }
+
+      @include minWidth($breakpoint-tablet) {
+        padding-bottom: 0;
+        padding-right: 1rem;        
       }
     }
 
