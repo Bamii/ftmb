@@ -1573,7 +1573,7 @@ section.bg-right {
   background: #F0EFEF;
   z-index: 1000;
   position: absolute;
-  top: 42rem;
+  top: 41rem;
   bottom: unset;
   width: 94vw;
   left: 3vw;
@@ -2237,8 +2237,8 @@ section.bg-right {
 }
 
 #services-section .services-section-body .right .all-service .icon img {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
 }
 
 #services-section .services-section-body .right .all-service .text {
@@ -2275,7 +2275,8 @@ section.bg-right {
 }
 
 #faq-section .left {
-  padding-right: 0;
+  padding: 2rem;
+  background-color: #F0EFEF;
 }
 
 #faq-section .right .input-container svg {
@@ -2287,7 +2288,7 @@ section.bg-right {
   text-align: right;
 }
 
-#faq-section .comments {
+#faq-section .feeds {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2300,7 +2301,7 @@ section.bg-right {
 }
 
 @media screen and (min-width: 760px) {
-  #faq-section .comments {
+  #faq-section .feeds {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -2309,79 +2310,29 @@ section.bg-right {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-}
-
-#faq-section .comments .comment {
-  width: 90%;
-  background: #F0EFEF;
-  padding: 5rem 1rem 1rem 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 1rem 0;
-  position: relative;
-  -webkit-box-shadow: 0px 0px 2px 0px #DDDDDD;
-          box-shadow: 0px 0px 2px 0px #DDDDDD;
-}
-
-@media screen and (min-width: 760px) {
-  #faq-section .comments .comment {
-    margin: 0;
+  #faq-section .feeds .feeds-header {
+    padding-right: 1rem;
+    padding-bottom: 0;
   }
 }
 
-#faq-section .comments .comment .comment-image {
-  position: absolute;
-  right: -30px;
-  top: -30px;
-  height: 80px;
-  width: 80px;
-  background: white;
-  border-radius: 50%;
-  padding: 2px;
-}
-
-#faq-section .comments .comment .comment-image img {
-  height: 100%;
-  width: 100%;
-}
-
-#faq-section .comments .comment .comment-title {
+#faq-section .feeds .feeds-header {
+  font-size: 3rem;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
   text-align: left;
-  padding: 1rem 0;
-  color: #E99F1E;
-  letter-spacing: 0.48px;
-  font-size: 0.95rem;
-}
-
-#faq-section .comments .comment .comment-body {
-  text-align: left;
-  padding: 0 0 2rem 0;
-}
-
-#faq-section .comments .comment .comment-button button {
-  font-size: 0.8rem;
   padding-right: 0;
+  padding-bottom: 1rem;
 }
 
-@media screen and (min-width: 760px) {
-  #faq-section .comments .comment {
-    margin: 0 40px 40px 0;
-    width: 210px;
-  }
+#faq-section .feeds .feeds-header span {
+  color: #0F4665;
 }
 
-@media screen and (min-width: 1024px) {
-  #faq-section .comments .comment {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    margin-right: 40px;
-  }
+#faq-section .feeds .feeds-body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 #loan-calculator-modal .mask .mask-contents div img {

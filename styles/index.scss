@@ -203,7 +203,7 @@ section {
     background: $gray-bg;
     z-index: 1000;
     position: absolute;    
-    top: 42rem;
+    top: 41rem;
     bottom: unset;
     width: 94vw;
     left: 3vw;
@@ -713,8 +713,8 @@ section {
 
         .icon {
           img {
-            height: 40px;
-            width: 40px;
+            height: 60px;
+            width: 60px;
           }
 
           padding: 0.5rem 0;
@@ -758,7 +758,8 @@ section {
   }
 
   .left {
-    padding-right: 0;
+    padding: 2rem;
+    background-color: $gray-bg;
   }
 
   .right {
@@ -773,7 +774,7 @@ section {
     }
   }
 
-  .comments {
+  .feeds {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -781,68 +782,28 @@ section {
     @include minWidth($breakpoint-tablet) {
       flex-direction: row;
       justify-content: space-between;
+
+      .feeds-header {
+        padding-right: 1rem;
+        padding-bottom: 0;
+      }
     }
 
-    .comment {
-      width: 90%;
-      background: $gray-bg;
-      padding: 5rem 1rem 1rem 1rem;
-      display: flex;
-      flex-direction: column;
-      margin: 1rem 0;
-      position: relative;
-      box-shadow: 0px 0px 2px 0px #DDDDDD;
+    .feeds-header {
+      font-size: 3rem;
+      font-family: $emphasis-font;
+      text-transform: uppercase;
+      text-align: left;
+      padding-right: 0;
+      padding-bottom: 1rem;
 
-      @include minWidth($breakpoint-tablet) {
-        margin: 0;
+      span {
+        color: $primary-color;
       }
+    }
 
-      .comment-image {
-        position: absolute;
-        right: -30px;
-        top: -30px;
-        height: 80px;
-        width: 80px;
-        background: white;
-        border-radius: 50%;
-        padding: 2px;
-
-        img {
-          height: 100%;
-          width: 100%;
-        }
-      }
-
-      .comment-title {
-        text-align: left;
-        padding: 1rem 0;
-        color: #E99F1E;
-        letter-spacing: 0.48px;
-        font-size: 0.95rem;
-      }
-
-      .comment-body {
-        text-align: left;
-        padding: 0 0 2rem 0;
-      }
-
-      .comment-button {
-        button {
-          font-size: 0.8rem;
-          padding-right: 0;
-        }
-      }
-
-      @include minWidth($breakpoint-tablet) {
-        // flex: 1;
-        margin: 0 40px 40px 0;
-        width: 210px;
-      }
-
-      @include minWidth($breakpoint-desktop) {
-        flex: 1;
-        margin-right: 40px;
-      }
+    .feeds-body {
+      flex: 1;
     }
   }
 }
