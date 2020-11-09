@@ -2274,7 +2274,7 @@ section{
             color:$theme-white;
             font-weight:500;
             border:none;
-            background-color: $theme-blue;
+            background-color: $secondary-color;
             border-radius:4px;
         }
         .panel-group{
@@ -3107,7 +3107,7 @@ section{
                 }
                 a{
                     button{
-                        background-color:$theme-blue;
+                        background-color: $secondary-color;
                         width:40%;
                         height:35px;
                         border:none;
@@ -3479,7 +3479,7 @@ section{
                     button{
                         height:40px;
                         color:$theme-white;
-                        background-color:$theme-blue;
+                        background-color: $secondary-color;
                         border:none;
                         float:right;
                         border-radius:3px;

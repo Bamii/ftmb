@@ -3997,7 +3997,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
   color: #f7f7f7;
   font-weight: 500;
   border: none;
-  background-color: #385E70;
+  background-color: #E99F1E;
   border-radius: 4px;
 }
 
@@ -4892,7 +4892,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .contact .row .col-md-4 form a button {
-  background-color: #385E70;
+  background-color: #E99F1E;
   width: 40%;
   height: 35px;
   border: none;
@@ -5300,7 +5300,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 .medially .row .col-md-8 .document .document-one button, .medially .row .rentLoan_content .col-md-3 .document .document-one button, .rentLoan_content .medially .row .col-md-3 .document .document-one button {
   height: 40px;
   color: #f7f7f7;
-  background-color: #385E70;
+  background-color: #E99F1E;
   border: none;
   float: right;
   border-radius: 3px;
