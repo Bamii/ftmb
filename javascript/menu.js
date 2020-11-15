@@ -1,4 +1,4 @@
-window.onload = function () {
+function menu($) {
   const menuLinks = document.getElementsByClassName("menu-link");
   const menuWrapper = document.getElementById("menu-wrapper");
   const searchWrapper = document.getElementById("search-wrapper");
@@ -6,8 +6,9 @@ window.onload = function () {
   const mobileMenu = document.getElementById("mobile-menu-button");
   const internetBankingButton = document.getElementById("internet-banking-button");
   const searchButton = document.getElementById("search-button");
+  const triggerSearch = document.getElementById("search");
   const mobileMenuLinks = document.getElementsByClassName("mobile-menu-header");
-  const closeButtons = document.getElementsByClassName("close-button");
+  const closeButtons = document.getElementsByClassName("menu-close-button");
   const internetBankingModalButtons = document.getElementsByClassName("internet-banking-modal-button")
   const searchClose = document.getElementById("search-close");
   const internetBankingClose = document.getElementById("internet-banking-close");
@@ -15,8 +16,16 @@ window.onload = function () {
   let isMenuOpen = false;
   let currentInternetBankingTab = 0;
 
+  console.log("hihi")
+  $(".expgroup").hide();
+  $(".share").click(function(){ 
+    console.log("hihi")
+    $(".expgroup").animate({height:'toggle'});
+  });
+
   Array.from(menuLinks).forEach((link) => {
     link.onclick = function (e) {
+      console.log("dfd")
       openMenu(e);
     };
   });
@@ -24,7 +33,8 @@ window.onload = function () {
   Array.from(closeButtons).forEach(closeButton => {
     closeButton.onclick = function(e) {
       const currMenuContent = document.querySelector(`[data-menu-content-index="${currentLinkIndex}"]`);
-
+    
+      console.log("sds")
       isMenuOpen = false;
       internetBankingWrapper.classList.remove("visible");
       searchWrapper.classList.remove("visible");
@@ -51,11 +61,19 @@ window.onload = function () {
     }
   });
 
+  triggerSearch.onclick = function() {
+    window.open("/search.html");
+  }
+
   internetBankingButton.onclick = function() {
     isMenuOpen = false;
     menuWrapper.classList.remove("visible");
     internetBankingWrapper.classList.toggle("visible");
     searchWrapper.classList.remove("visible");
+  }
+  
+  internetBankingClose.onclick = function() {
+    internetBankingWrapper.classList.remove("visible");
   }
   
   searchButton.onclick = function() {
@@ -67,10 +85,6 @@ window.onload = function () {
 
   searchClose.onclick = function() {
     searchWrapper.classList.remove("visible");
-  }
-
-  internetBankingClose.onclick = function() {
-    internetBankingWrapper.classList.remove("visible");
   }
 
   mobileMenu.onclick = function(e) {
@@ -110,3 +124,5 @@ window.onload = function () {
     menuWrapper.classList.toggle("visible");
   }
 };
+
+menu($);

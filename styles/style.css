@@ -347,7 +347,7 @@ header #menu-wrapper .menu-container .menu-items .menu-image img {
 }
 
 header #menu-wrapper .menu-container .menu-items .menu-contents {
-  padding: 2.5rem;
+  padding: 2.5rem 2.5rem 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -392,6 +392,7 @@ header #menu-wrapper .menu-container .menu-items .menu-contents .menu-content-co
 header #menu-wrapper .menu-container .menu-items .menu-contents .menu-view-all {
   text-transform: uppercase;
   color: #0F4665;
+  font-size: 0.8rem;
 }
 
 header #menu-wrapper .menu-container .menu-items .menu-contents .menu-view-all:hover {
@@ -939,6 +940,32 @@ main {
   padding: 5.5rem 0 5rem 0;
 }
 
+section.bg-left, .bg-left.loanMortages, .bg-left.rentLoan {
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-image: url(/assets/pattern.svg);
+  background-size: 50%;
+}
+
+@media screen and (min-width: 760px) {
+  section.bg-left, .bg-left.loanMortages, .bg-left.rentLoan {
+    background-size: 30%;
+  }
+}
+
+section.bg-right, .bg-right.loanMortages, .bg-right.rentLoan {
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-image: url(/assets/pattern.svg);
+  background-size: 50%;
+}
+
+@media screen and (min-width: 760px) {
+  section.bg-right, .bg-right.loanMortages, .bg-right.rentLoan {
+    background-size: 30%;
+  }
+}
+
 .section-wrapper section, .section-wrapper .loanMortages, .section-wrapper .rentLoan {
   max-width: 1440px;
   margin: 0 auto;
@@ -1164,7 +1191,7 @@ main {
 #banner-container .banner {
   height: 25rem;
   width: 100%;
-  background: url(/assets/banner.png);
+  background-image: url(/assets/banner.png);
   background-size: cover;
   background-position: center;
   display: -webkit-box;
@@ -1327,6 +1354,90 @@ main {
 
 #banner-container #target-savings-banner {
   background-image: url("/assets/Product_Images/Target Savings.png");
+}
+
+#banner-container #about-banner {
+  background-image: url("/assets/About_Images/banner.jpg");
+}
+
+.share-container {
+  bottom: 0;
+  position: fixed;
+  z-index: 9999;
+  float: left !important;
+  width: 70px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+}
+
+.share-container .share {
+  background-color: #E99F1E;
+  color: white;
+  width: 50px;
+  bottom: 20px;
+  position: fixed;
+  cursor: pointer;
+  height: 50px;
+  border-radius: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto 0 auto;
+}
+
+.share-container .share i {
+  margin: 15px;
+  font-size: 20px;
+}
+
+.share-container .expgroup {
+  width: 50px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.share-container .expgroup a button {
+  display: list-item;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin-top: 7px;
+  font-size: 20px;
+  color: #fff;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.share-container .expgroup a button:hover {
+  background-color: #E99F1E;
+}
+
+.share-container .expgroup a:nth-child(1) button {
+  background-color: #4267B2;
+}
+
+.share-container .expgroup a:nth-child(2) button {
+  background-color: #0077B5;
+}
+
+.share-container .expgroup a:nth-child(3) button {
+  background-color: #ED4956;
+}
+
+.share-container .expgroup a:nth-child(4) button {
+  background-color: #1DA1F2;
+}
+
+.share-container .expgroup a:nth-child(5) button {
+  background-color: #FF0000;
+}
+
+.share-container .expgroup a:nth-child(6) button {
+  background-color: limegreen;
+}
+
+.share-container span {
+  font-weight: 700;
 }
 
 *,
@@ -1591,7 +1702,7 @@ button[type="submit"]:focus {
 }
 
 .modal_content .head a i {
-  color: #385E70;
+  color: #0F4665;
   font-size: 14px;
   margin: 0 10px;
 }
@@ -1622,7 +1733,7 @@ button[type="submit"]:focus {
 
 .modal_content .panel-group .panel-heading i {
   float: right;
-  color: #385E70;
+  color: #0F4665;
   cursor: pointer;
 }
 
@@ -1648,7 +1759,7 @@ button[type="submit"]:focus {
 }
 
 .modal_content .panel-group .panel-collapse li a {
-  color: #385E70;
+  color: #0F4665;
 }
 
 .modal_content .panel-group .panel-collapse li a:hover {
@@ -1678,7 +1789,7 @@ button[type="submit"]:focus {
 }
 
 .modal_content .quick li a {
-  color: #385E70;
+  color: #0F4665;
 }
 
 * {
@@ -1780,7 +1891,7 @@ button[type="submit"]:focus {
 }
 
 .fixed-header .top .lock {
-  background-color: #385E70;
+  background-color: #0F4665;
   border-radius: 3px;
   font-size: 10px;
   padding: 3px;
@@ -1802,7 +1913,7 @@ button[type="submit"]:focus {
 }
 
 .fixed-header .top .int a {
-  color: #385E70;
+  color: #0F4665;
 }
 
 .fixed-header ul {
@@ -1830,12 +1941,13 @@ button[type="submit"]:focus {
   padding-left: 45px;
 }
 
-body, html {
+body,
+html {
   padding: 0;
   margin: 0;
   height: 100%;
   width: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 section, .loanMortages, .rentLoan {
@@ -1899,15 +2011,21 @@ section header .logo .main, .loanMortages header .logo .main, .rentLoan header .
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
-  10%, 20% {
+  10%,
+  20% {
     -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
     transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
   }
-  30%, 50%, 70%, 90% {
+  30%,
+  50%,
+  70%,
+  90% {
     -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
   }
-  40%, 60%, 80% {
+  40%,
+  60%,
+  80% {
     -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
   }
@@ -1923,7 +2041,10 @@ section header .logo i, .loanMortages header .logo i, .rentLoan header .logo i {
   float: right;
 }
 
-section header .col-md-3, .loanMortages header .col-md-3, .rentLoan header .col-md-3, section header .col-md-9, .loanMortages header .col-md-9, .rentLoan header .col-md-9 {
+section header .col-md-3, .loanMortages header .col-md-3, .rentLoan header .col-md-3,
+section header .col-md-9,
+.loanMortages header .col-md-9,
+.rentLoan header .col-md-9 {
   padding-left: 0;
   padding-right: 0;
 }
@@ -1949,7 +2070,7 @@ section header .top .fas, .loanMortages header .top .fas, .rentLoan header .top 
 }
 
 section header .top .lock, .loanMortages header .top .lock, .rentLoan header .top .lock {
-  background-color: #385E70;
+  background-color: #0F4665;
   border-radius: 3px;
   font-size: 10px;
   padding: 3px;
@@ -1965,7 +2086,7 @@ section header .top .fab, .loanMortages header .top .fab, .rentLoan header .top 
 }
 
 section header .top .fab:hover, .loanMortages header .top .fab:hover, .rentLoan header .top .fab:hover {
-  color: #385E70;
+  color: #0F4665;
 }
 
 section header .top .search, .loanMortages header .top .search, .rentLoan header .top .search {
@@ -2114,7 +2235,7 @@ section header:hover .top, .loanMortages header:hover .top, .rentLoan header:hov
 }
 
 section header:hover .top .search, .loanMortages header:hover .top .search, .rentLoan header:hover .top .search {
-  color: #385E70;
+  color: #0F4665;
 }
 
 section header:hover .top .lock, .loanMortages header:hover .top .lock, .rentLoan header:hover .top .lock {
@@ -2155,7 +2276,7 @@ section .hovered .top, .loanMortages .hovered .top, .rentLoan .hovered .top {
 }
 
 section .hovered .top .search, .loanMortages .hovered .top .search, .rentLoan .hovered .top .search {
-  color: #385E70;
+  color: #0F4665;
 }
 
 section .hovered .top .lock, .loanMortages .hovered .top .lock, .rentLoan .hovered .top .lock {
@@ -2195,7 +2316,10 @@ section .back_down, .loanMortages .back_down, .rentLoan .back_down {
   transition: 0.2s ease-in;
 }
 
-section .back_down .col-md-3, .loanMortages .back_down .col-md-3, .rentLoan .back_down .col-md-3, section .back_down .col-md-9, .loanMortages .back_down .col-md-9, .rentLoan .back_down .col-md-9 {
+section .back_down .col-md-3, .loanMortages .back_down .col-md-3, .rentLoan .back_down .col-md-3,
+section .back_down .col-md-9,
+.loanMortages .back_down .col-md-9,
+.rentLoan .back_down .col-md-9 {
   padding: 0;
 }
 
@@ -2224,7 +2348,7 @@ section .back_down .top .search, .loanMortages .back_down .top .search, .rentLoa
 }
 
 section .back_down .top .lock, .loanMortages .back_down .top .lock, .rentLoan .back_down .top .lock {
-  background-color: #385E70;
+  background-color: #0F4665;
   border-radius: 100%;
   font-size: 10px;
   padding: 3px;
@@ -2288,7 +2412,13 @@ section .caption .caption_text, .loanMortages .caption .caption_text, .rentLoan 
   float: left;
 }
 
-section .caption .text_2, .loanMortages .caption .text_2, .rentLoan .caption .text_2, section .caption .text_3, .loanMortages .caption .text_3, .rentLoan .caption .text_3, section .caption .text_4, .loanMortages .caption .text_4, .rentLoan .caption .text_4 {
+section .caption .text_2, .loanMortages .caption .text_2, .rentLoan .caption .text_2,
+section .caption .text_3,
+.loanMortages .caption .text_3,
+.rentLoan .caption .text_3,
+section .caption .text_4,
+.loanMortages .caption .text_4,
+.rentLoan .caption .text_4 {
   display: none;
 }
 
@@ -2337,7 +2467,7 @@ section .caption button, .loanMortages .caption button, .rentLoan .caption butto
   color: #f7f7f7;
   border: none;
   border-radius: 7px;
-  background-color: #385E70;
+  background-color: #0F4665;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -2362,7 +2492,7 @@ section .caption button span, .loanMortages .caption button span, .rentLoan .cap
 }
 
 section .caption button:hover, .loanMortages .caption button:hover, .rentLoan .caption button:hover {
-  color: #385E70;
+  color: #0F4665;
 }
 
 section .caption button:hover span, .loanMortages .caption button:hover span, .rentLoan .caption button:hover span {
@@ -2600,23 +2730,23 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .right .expgroup a:nth-child(1) button {
-  background-color: #4267B2;
+  background-color: #4267b2;
 }
 
 .right .expgroup a:nth-child(2) button {
-  background-color: #0077B5;
+  background-color: #0077b5;
 }
 
 .right .expgroup a:nth-child(3) button {
-  background-color: #ED4956;
+  background-color: #ed4956;
 }
 
 .right .expgroup a:nth-child(4) button {
-  background-color: #1DA1F2;
+  background-color: #1da1f2;
 }
 
 .right .expgroup a:nth-child(5) button {
-  background-color: #FF0000;
+  background-color: #ff0000;
 }
 
 .right span {
@@ -2653,25 +2783,25 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 
 .why .mx-auto ::-webkit-input-placeholder {
   text-align: center;
-  color: #34657F;
+  color: #34657f;
   font-weight: 500;
 }
 
 .why .mx-auto :-ms-input-placeholder {
   text-align: center;
-  color: #34657F;
+  color: #34657f;
   font-weight: 500;
 }
 
 .why .mx-auto ::-ms-input-placeholder {
   text-align: center;
-  color: #34657F;
+  color: #34657f;
   font-weight: 500;
 }
 
 .why .mx-auto ::placeholder {
   text-align: center;
-  color: #34657F;
+  color: #34657f;
   font-weight: 500;
 }
 
@@ -2690,7 +2820,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
   margin-left: 20px;
   border: none;
   border-radius: 7px;
-  background-color: #385E70;
+  background-color: #0F4665;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -2715,7 +2845,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .why .mx-auto .col-md-3 button:hover {
-  color: #385E70;
+  color: #0F4665;
   -webkit-box-shadow: 0px 3px 10px rgba(56, 94, 112, 0.7);
           box-shadow: 0px 3px 10px rgba(56, 94, 112, 0.7);
 }
@@ -2787,7 +2917,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 .why .pro .col-md-4 .cont i {
   font-size: 13px;
   color: #fff;
-  background-color: #385E70;
+  background-color: #0F4665;
   border-radius: 100%;
 }
 
@@ -2817,7 +2947,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .why .pro p a {
-  color: #385E70;
+  color: #0F4665;
   text-decoration: underline;
 }
 
@@ -2975,17 +3105,23 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
   margin-top: 50px;
 }
 
-.getting-started .tab-content #home .row .col-md-4, .everything .tab-content #home .row .col-md-4, .getting-started .tab-content #menu1 .row .col-md-4, .everything .tab-content #menu1 .row .col-md-4 {
+.getting-started .tab-content #home .row .col-md-4, .everything .tab-content #home .row .col-md-4,
+.getting-started .tab-content #menu1 .row .col-md-4,
+.everything .tab-content #menu1 .row .col-md-4 {
   text-align: center;
 }
 
-.getting-started .tab-content #home .row .col-md-4 h5, .everything .tab-content #home .row .col-md-4 h5, .getting-started .tab-content #menu1 .row .col-md-4 h5, .everything .tab-content #menu1 .row .col-md-4 h5 {
+.getting-started .tab-content #home .row .col-md-4 h5, .everything .tab-content #home .row .col-md-4 h5,
+.getting-started .tab-content #menu1 .row .col-md-4 h5,
+.everything .tab-content #menu1 .row .col-md-4 h5 {
   margin-top: 30px;
   font-weight: 700;
   font-size: 17px;
 }
 
-.getting-started .tab-content #home .row .col-md-4 p, .everything .tab-content #home .row .col-md-4 p, .getting-started .tab-content #menu1 .row .col-md-4 p, .everything .tab-content #menu1 .row .col-md-4 p {
+.getting-started .tab-content #home .row .col-md-4 p, .everything .tab-content #home .row .col-md-4 p,
+.getting-started .tab-content #menu1 .row .col-md-4 p,
+.everything .tab-content #menu1 .row .col-md-4 p {
   font-size: 13px;
   margin-top: 10px;
   font-weight: 400;
@@ -3075,7 +3211,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 
 .everything .tab button {
   display: block;
-  background-color: #385E70;
+  background-color: #0F4665;
   color: #fff;
   padding: 16px 16px;
   width: 100%;
@@ -3149,13 +3285,13 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 
 .everything .tabcontent span {
   font-size: 12px;
-  color: #385E70;
+  color: #0F4665;
   font-weight: 500;
   padding-left: 30px;
 }
 
 .everything .tabcontent span i {
-  background-color: #385E70;
+  background-color: #0F4665;
   font-size: 13px;
   margin-right: 10px;
   color: #fff;
@@ -3331,7 +3467,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
   color: #f7f7f7;
   border: none;
   border-radius: 7px;
-  background-color: #385E70;
+  background-color: #0F4665;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -3356,7 +3492,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .who-we-are .text button:hover {
-  color: #385E70;
+  color: #0F4665;
   -webkit-box-shadow: 0px 3px 10px rgba(56, 94, 112, 0.7);
           box-shadow: 0px 3px 10px rgba(56, 94, 112, 0.7);
 }
@@ -3475,7 +3611,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 
 .location .row .description li {
   list-style: none;
-  color: #385E70;
+  color: #0F4665;
   font-weight: 600;
   font-size: 12px;
   line-height: 30px;
@@ -3483,7 +3619,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .location .row .description li i {
-  background-color: #385E70;
+  background-color: #0F4665;
   font-size: 12px;
   margin-right: 10px;
   color: #fff;
@@ -3966,7 +4102,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 .rentLoan_content .col-md-8 ul, .rentLoan_content .col-md-3 ul {
   padding-left: 15px;
   list-style-type: square;
-  color: #385E70;
+  color: #0F4665;
   font-size: 12px;
   font-weight: 300;
   line-height: 2em;
@@ -3988,7 +4124,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .rentLoan_content .col-md-8 .not a, .rentLoan_content .col-md-3 .not a {
-  color: #385E70;
+  color: #0F4665;
 }
 
 .rentLoan_content .col-md-8 button, .rentLoan_content .col-md-3 button {
@@ -4029,7 +4165,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .rentLoan_content .col-md-8 .panel-group .panel-heading:hover, .rentLoan_content .col-md-3 .panel-group .panel-heading:hover {
-  background-color: #385E70;
+  background-color: #0F4665;
   color: #f7f7f7;
 }
 
@@ -4048,7 +4184,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .rentLoan_content .col-md-3 li a {
-  color: #385E70;
+  color: #0F4665;
 }
 
 .rentLoan_content .col-md-3 li a span {
@@ -4078,7 +4214,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .rentLoan_content .col-md-3 .number li span {
-  color: #385E70;
+  color: #0F4665;
   font-weight: 700;
   margin-left: 10px;
 }
@@ -4135,7 +4271,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .about_us {
-  margin-top: 100px;
+  margin-top: 2rem;
   height: inherit;
   margin-bottom: 50px;
   display: -webkit-box;
@@ -4157,20 +4293,33 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    margin-top: 8rem;
   }
 }
 
 .about_us .tab {
-  float: left;
   background-color: transparent;
-  width: 25%;
-  height: 400px;
+  width: 100%;
+  margin-bottom: 2rem;
 }
 
 .about_us .tab h3 {
   color: #000;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 24px;
+}
+
+@media screen and (min-width: 760px) {
+  .about_us .tab {
+    width: 40%;
+    margin-bottom: inherit;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about_us .tab {
+    width: 25%;
+  }
 }
 
 .about_us .tab button {
@@ -4185,42 +4334,64 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  font-size: 12px;
-  color: #54575C;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: 1.5rem;
+  background: #F0EFEF;
+  border-radius: 4px;
+  color: #0F4665;
+  margin: 0.8rem 0;
+  font-family: "Roboto Condensed", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.about_us .tab button span {
-  font-size: 15px;
-  margin-right: 10px;
+.about_us .tab button:first-child {
+  margin-top: 0;
 }
 
-.about_us .next-one {
-  margin-top: 5px;
+.about_us .tab button img {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 1rem;
 }
 
 .about_us .tab button:hover {
-  color: #385E70;
+  color: white;
+  background: #E99F1E;
   font-weight: 500;
 }
 
 .about_us .tab button.active {
-  color: #385E70;
+  color: #F0EFEF;
+  background: #0F4665;
   font-weight: 700;
 }
 
 .about_us .tabcontent {
-  float: right;
   background-color: transparent;
-  width: 72%;
-  border-left: 1px solid rgba(84, 87, 92, 0.3);
-  padding-left: 20px;
+  width: 100%;
   height: auto;
 }
 
+@media screen and (min-width: 760px) {
+  .about_us .tabcontent {
+    padding-left: 20px;
+    width: 72%;
+  }
+}
+
 .about_us .tabcontent h2 {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
   margin-top: 20px;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #0F4665;
 }
 
 .about_us .tabcontent h6 {
@@ -4261,104 +4432,160 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 
 .about_us .tabcontent .head_core {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .about_us .tabcontent .core_values {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 760px) {
+  .about_us .tabcontent .core_values {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .about_us .tabcontent .core_values .value {
-  width: 31%;
-  height: 250px;
-  background-color: rgba(247, 247, 247, 0.4);
-  padding: 80px 0 0 0;
+  padding: 5rem 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #F0EFEF;
   text-align: center;
   border-radius: 7px;
-  color: rgba(84, 87, 92, 0.5);
+  color: #0F4665;
   border: 1px solid rgba(84, 87, 92, 0.3);
   float: left;
   -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
+  margin: 0.5rem 0;
 }
 
-.about_us .tabcontent .core_values .value h1 {
+@media screen and (min-width: 760px) {
+  .about_us .tabcontent .core_values .value {
+    margin: 0 2%;
+  }
+}
+
+.about_us .tabcontent .core_values .value h3 {
   font-size: 50px;
   font-weight: 700;
 }
 
-.about_us .tabcontent .core_values .innovation, .about_us .tabcontent .core_values .excellence {
-  margin-left: 2%;
-}
-
 .about_us .tabcontent .core_values .value:hover {
-  background-color: #385E70;
-  color: #f7f7f7;
+  background-color: #E99F1E;
+  color: #F0EFEF;
 }
 
 .about_us .tabcontent .core_values .value.active {
-  background-color: #385E70;
-  color: #f7f7f7;
+  background-color: #E99F1E;
+  color: #F0EFEF;
 }
 
-.about_us .tabcontent .image, .about_us .everything .tabcontent .image_two, .everything .about_us .tabcontent .image_two, .about_us .everything .tabcontent .image_three, .everything .about_us .tabcontent .image_three, .about_us .everything .tabcontent .image_four, .everything .about_us .tabcontent .image_four, .about_us .everything .tabcontent .image_five, .everything .about_us .tabcontent .image_five {
+.about_us .tabcontent#Overview .image, .about_us .everything .tabcontent#Overview .image_two, .everything .about_us .tabcontent#Overview .image_two, .about_us .everything .tabcontent#Overview .image_three, .everything .about_us .tabcontent#Overview .image_three, .about_us .everything .tabcontent#Overview .image_four, .everything .about_us .tabcontent#Overview .image_four, .about_us .everything .tabcontent#Overview .image_five, .everything .about_us .tabcontent#Overview .image_five {
   width: 100%;
   height: 250px;
-  background-image: url(/images/Rent%20Loan%203.png);
+  background-image: url(/assets/About_Images/summary.jpg);
   background-position: center;
   background-size: cover;
 }
 
-.about_us .tabcontent .profile {
+.about_us .tabcontent .profiles-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 760px) {
+  .about_us .tabcontent .profiles-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.about_us .tabcontent .profiles-container .profile {
   text-align: center;
-  width: 130px;
-  height: 250px;
-  float: left;
+  width: 2rem;
+  height: 5rem;
   cursor: pointer;
-}
-
-.about_us .tabcontent .profile .picture {
-  width: 130px;
-  height: 130px;
-  border-radius: 100%;
-  padding-top: 1px;
-  background-color: #f7f7f7;
-}
-
-.about_us .tabcontent .profile .picture .image, .about_us .everything .tabcontent .profile .picture .image_two, .everything .about_us .tabcontent .profile .picture .image_two, .about_us .everything .tabcontent .profile .picture .image_three, .everything .about_us .tabcontent .profile .picture .image_three, .about_us .everything .tabcontent .profile .picture .image_four, .everything .about_us .tabcontent .profile .picture .image_four, .about_us .everything .tabcontent .profile .picture .image_five, .everything .about_us .tabcontent .profile .picture .image_five {
-  height: 90px;
-  width: 90px;
-  border-radius: 100px;
-  margin: 20px auto;
-  background-image: url(/images/Korede%20ceo.jpg);
-  background-position: top;
+  margin: 0 1.5rem 1.5rem 0;
+  width: 12rem;
+  height: 17rem;
+  border-radius: 8px;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.about_us .tabcontent .profile h5 {
-  font-size: 13px;
-  font-weight: 700;
-  margin-top: 10px;
-  margin-bottom: 0;
-  text-transform: capitalize;
+.about_us .tabcontent .profiles-container .profile:hover {
+  -webkit-box-shadow: 0px 0px 7px -2px #B4B4B4;
+          box-shadow: 0px 0px 7px -2px #B4B4B4;
 }
 
-.about_us .tabcontent .profile p {
-  margin-top: -8px;
-  font-weight: 300;
-  font-size: 11px;
+.about_us .tabcontent .profiles-container .profile:hover .profile-name {
+  padding: 1.2rem 0;
 }
 
-.about_us .tabcontent .left {
-  margin-left: 20px;
+@media screen and (min-width: 1024px) {
+  .about_us .tabcontent .profiles-container .profile {
+    width: 14rem;
+    height: 20rem;
+  }
+}
+
+.about_us .tabcontent .profiles-container .profile .profile-name {
+  background: rgba(16, 17, 20, 0.8);
+  color: white;
+  font-size: 1rem;
+  padding: 1rem 0;
+  border-radius: 0 0 8px 8px;
+}
+
+.about_us .tabcontent .profiles-container .profile .profile-name .name {
+  color: #E99F1E;
+  font-size: 1.1rem;
+}
+
+.about_us .tabcontent .profiles-container .profile .profile-name p {
+  padding: 0.2rem 0;
+  margin: 0;
+  color: white;
+  font-size: 0.8rem;
 }
 
 .about_us .tabcontent p {
   color: #54575C;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 1rem;
   padding: 15px 0;
   margin-top: 5px;
   margin-bottom: 0;
@@ -4390,145 +4617,8 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
   color: #f7f7f7;
   font-weight: 500;
   border: none;
-  background-color: #385E70;
+  background-color: #0F4665;
   border-radius: 4px;
-}
-
-@media only screen and (max-width: 320px) {
-  .about_us {
-    margin-top: 30px;
-  }
-  .about_us .tab {
-    width: 100%;
-    height: 250px;
-  }
-  .about_us .tabcontent {
-    width: 100%;
-    padding-left: 0;
-    border-left: none;
-    padding-bottom: 40px;
-  }
-  .about_us .tabcontent h2 {
-    margin-top: 0;
-  }
-  .about_us .tabcontent h6 {
-    margin-top: 0px;
-  }
-  .about_us .tabcontent .split .objective {
-    width: 100%;
-  }
-  .about_us .tabcontent .split .mobile {
-    margin-top: 20px;
-  }
-  .about_us .tabcontent .head_core {
-    margin-bottom: 0;
-  }
-  .about_us .tabcontent .core_values .value {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 15px;
-  }
-  .about_us .tabcontent .mob {
-    margin-left: 0;
-  }
-  .about_us .tabcontent .career {
-    height: 240px;
-  }
-  .about_us .tabcontent .career p {
-    padding-top: 0;
-  }
-}
-
-@media only screen and (min-width: 321px) and (max-width: 540px) {
-  .about_us {
-    margin-top: 30px;
-    padding: 0 30px;
-  }
-  .about_us .tab {
-    width: 100%;
-    height: 250px;
-  }
-  .about_us .tabcontent {
-    width: 100%;
-    padding-left: 0;
-    border-left: none;
-    padding-bottom: 40px;
-  }
-  .about_us .tabcontent h2 {
-    margin-top: 0;
-  }
-  .about_us .tabcontent h6 {
-    margin-top: 0px;
-  }
-  .about_us .tabcontent .split .objective {
-    width: 100%;
-  }
-  .about_us .tabcontent .split .mobile {
-    margin-top: 20px;
-  }
-  .about_us .tabcontent .head_core {
-    margin-bottom: 0;
-  }
-  .about_us .tabcontent .core_values .value {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 15px;
-  }
-  .about_us .tabcontent .mob {
-    margin-left: 0;
-  }
-  .about_us .tabcontent .career {
-    height: 240px;
-  }
-  .about_us .tabcontent .career p {
-    padding-top: 0;
-  }
-}
-
-@media only screen and (min-width: 541px) and (max-width: 720px) {
-  .about_us {
-    margin-top: 30px;
-    padding: 0 50px;
-  }
-  .about_us .tab {
-    width: 100%;
-    height: 250px;
-  }
-  .about_us .tabcontent {
-    width: 100%;
-    padding-left: 0;
-    border-left: none;
-    padding-bottom: 40px;
-  }
-  .about_us .tabcontent h2 {
-    margin-top: 0;
-  }
-  .about_us .tabcontent h6 {
-    margin-top: 0px;
-  }
-  .about_us .tabcontent .split .objective {
-    width: 100%;
-  }
-  .about_us .tabcontent .split .mobile {
-    margin-top: 20px;
-  }
-  .about_us .tabcontent .head_core {
-    margin-bottom: 0;
-  }
-  .about_us .tabcontent .core_values .value {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 15px;
-  }
-  .about_us .tabcontent .mob {
-    margin-left: 0;
-  }
-  .about_us .tabcontent .career {
-    height: 240px;
-  }
-  .about_us .tabcontent .career p {
-    padding-top: 0;
-  }
 }
 
 .cooperate-application {
@@ -4563,7 +4653,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .cooperate-application .row .col-md-4:hover {
-  background-color: #385E70;
+  background-color: #0F4665;
 }
 
 .cooperate-application .row .col-md-4:hover a {
@@ -4682,6 +4772,10 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
   border: none;
   margin: 60px 0px 70px 25px;
   background-color: #EAAB26;
+}
+
+.thetoggleTabs input[type="date"]:empty, .thetoggleTabs .contact .row .col-md-4 form textarea[type="date"]:empty, .contact .row .col-md-4 form .thetoggleTabs textarea[type="date"]:empty {
+  color: transparent;
 }
 
 @media only screen and (max-width: 320px) {
@@ -4803,7 +4897,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 .contact .row .col-md-7 .medial .head i {
   float: right;
   font-size: 24px;
-  color: #385E70;
+  color: #0F4665;
 }
 
 .contact .row .col-md-7 .medial p {
@@ -4812,7 +4906,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .contact .row .col-md-7 .medial p a {
-  color: #385E70;
+  color: #0F4665;
   font-weight: 600;
 }
 
@@ -4822,7 +4916,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .contact .row .col-md-7 .medial .foot p {
-  color: #385E70;
+  color: #0F4665;
   font-weight: 700;
   font-size: 16px;
 }
@@ -4830,17 +4924,19 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 .contact .row .col-md-7 .medial .foot p i {
   color: #f7f7f7;
   padding: 2px 5px;
-  background-color: #385E70;
+  background-color: #0F4665;
   border-radius: 100%;
   font-size: 13px;
   margin-right: 5px;
 }
 
-.contact .row .col-md-7 .chaty, .contact .row .col-md-7 .emaily {
+.contact .row .col-md-7 .chaty,
+.contact .row .col-md-7 .emaily {
   float: right;
 }
 
-.contact .row .col-md-7 .cally, .contact .row .col-md-7 .emaily {
+.contact .row .col-md-7 .cally,
+.contact .row .col-md-7 .emaily {
   margin-top: 4%;
 }
 
@@ -5101,13 +5197,16 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .medially .row .col-md-8 .medial a, .medially .row .rentLoan_content .col-md-3 .medial a, .rentLoan_content .medially .row .col-md-3 .medial a {
-  color: #385E70;
+  color: #0F4665;
   font-weight: 600;
   font-size: 14px;
   padding-left: 15px;
 }
 
-.medially .row .col-md-8 .chaty, .medially .row .rentLoan_content .col-md-3 .chaty, .rentLoan_content .medially .row .col-md-3 .chaty, .medially .row .col-md-8 .cally, .medially .row .rentLoan_content .col-md-3 .cally, .rentLoan_content .medially .row .col-md-3 .cally {
+.medially .row .col-md-8 .chaty, .medially .row .rentLoan_content .col-md-3 .chaty, .rentLoan_content .medially .row .col-md-3 .chaty,
+.medially .row .col-md-8 .cally,
+.medially .row .rentLoan_content .col-md-3 .cally,
+.rentLoan_content .medially .row .col-md-3 .cally {
   margin-left: 2%;
 }
 
@@ -5160,7 +5259,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .medially .row .col-md-8 .newy .first .text a, .medially .row .rentLoan_content .col-md-3 .newy .first .text a, .rentLoan_content .medially .row .col-md-3 .newy .first .text a, .medially .row .col-md-8 .gallery .first .text a, .medially .row .rentLoan_content .col-md-3 .gallery .first .text a, .rentLoan_content .medially .row .col-md-3 .gallery .first .text a, .medially .row .col-md-8 .video-div .first .text a, .medially .row .rentLoan_content .col-md-3 .video-div .first .text a, .rentLoan_content .medially .row .col-md-3 .video-div .first .text a, .medially .row .col-md-8 .document .first .text a, .medially .row .rentLoan_content .col-md-3 .document .first .text a, .rentLoan_content .medially .row .col-md-3 .document .first .text a {
-  color: #385E70;
+  color: #0F4665;
   font-weight: 600;
   font-size: 13px;
 }
@@ -5319,7 +5418,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 
 .medially .row .col-md-3 li {
   list-style: none;
-  color: #385E70;
+  color: #0F4665;
   font-size: 13px;
 }
 

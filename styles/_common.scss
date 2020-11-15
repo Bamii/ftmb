@@ -61,6 +61,30 @@ main {
   padding: 5.5rem 0 5rem 0;
 }
 
+section {
+  &.bg-left {
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-image: url(/assets/pattern.svg);
+    background-size: 50%;
+    
+    @include minWidth($breakpoint-tablet) {
+      background-size: 30%;
+    }
+  }
+
+  &.bg-right {
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-image: url(/assets/pattern.svg);
+    background-size: 50%;
+    
+    @include minWidth($breakpoint-tablet) {
+      background-size: 30%;
+    }
+  }
+}
+
 .section-wrapper {
   section {
     @include generalWidth();
@@ -263,7 +287,7 @@ main {
   .banner {
     height: 25rem;
     width: 100%;
-    background: url(/assets/banner.png);
+    background-image: url(/assets/banner.png);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -385,4 +409,102 @@ main {
   #target-savings-banner {
     background-image: url("/assets/Product_Images/Target\ Savings.png");
   }
+  #about-banner {
+    background-image: url("/assets/About_Images/banner.jpg") ;
+  }
+}
+
+.share-container{
+  bottom:0;
+  position: fixed;
+  z-index: 9999;
+  float:left !important;
+  width:70px;
+  padding-left:20px;
+  padding-bottom:30px;
+
+  .share{
+      background-color:$secondary-color;
+      color:white;
+      width:50px;
+      bottom:20px;
+      position: fixed;
+      cursor: pointer;
+      height:50px;
+      border-radius:100%;
+      box-sizing: border-box;
+      margin:0 auto 0 auto;
+      i{
+          margin: 15px;
+          font-size:20px;
+      }
+  }
+  .expgroup{
+      width:50px;
+      text-align: center;
+      padding-bottom: 50px;
+     a{
+      button{
+          display: list-item;
+          border:none;
+          width:50px;
+          height:50px;
+          border-radius: 100%;
+          margin-top:7px;
+          font-size:20px;
+          //background-color:$primary-color; // this
+          color:#fff;
+          transition: 0.2s ease-in;
+      }
+     
+      button:hover{
+          background-color:$secondary-color;
+      }
+     }
+     a:nth-child(1){
+      button{
+       background-color:#4267B2;
+      }
+   }
+   a:nth-child(2){
+      button{
+       background-color:#0077B5;
+      }
+   }
+   a:nth-child(3){
+      button{
+       background-color:#ED4956;
+      }
+   }
+   a:nth-child(4){
+      button{
+       background-color:#1DA1F2
+      }
+   }
+      a:nth-child(5){
+         button{
+          background-color:#FF0000;
+         }
+      }
+      a:nth-child(6){
+         button{
+          background-color: limegreen;
+         }
+      }
+    }
+  span{
+      font-weight: 700;
+  }
+  @media only screen and (max-width:320px){
+     // display: none;
+  }
+
+  @media only screen and (min-width:321px) and (max-width:540px){
+     // display:none;
+  }
+
+  @media only screen and (min-width:541px) and (max-width:720px){
+      //display: none;
+  }
+
 }

@@ -347,7 +347,7 @@ header #menu-wrapper .menu-container .menu-items .menu-image img {
 }
 
 header #menu-wrapper .menu-container .menu-items .menu-contents {
-  padding: 2.5rem;
+  padding: 2.5rem 2.5rem 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -392,6 +392,7 @@ header #menu-wrapper .menu-container .menu-items .menu-contents .menu-content-co
 header #menu-wrapper .menu-container .menu-items .menu-contents .menu-view-all {
   text-transform: uppercase;
   color: #0F4665;
+  font-size: 0.8rem;
 }
 
 header #menu-wrapper .menu-container .menu-items .menu-contents .menu-view-all:hover {
@@ -933,6 +934,32 @@ main {
   padding: 5.5rem 0 5rem 0;
 }
 
+section.bg-left {
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-image: url(/assets/pattern.svg);
+  background-size: 50%;
+}
+
+@media screen and (min-width: 760px) {
+  section.bg-left {
+    background-size: 30%;
+  }
+}
+
+section.bg-right {
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-image: url(/assets/pattern.svg);
+  background-size: 50%;
+}
+
+@media screen and (min-width: 760px) {
+  section.bg-right {
+    background-size: 30%;
+  }
+}
+
 .section-wrapper section {
   max-width: 1440px;
   margin: 0 auto;
@@ -1158,7 +1185,7 @@ main {
 #banner-container .banner {
   height: 25rem;
   width: 100%;
-  background: url(/assets/banner.png);
+  background-image: url(/assets/banner.png);
   background-size: cover;
   background-position: center;
   display: -webkit-box;
@@ -1323,35 +1350,93 @@ main {
   background-image: url("/assets/Product_Images/Target Savings.png");
 }
 
+#banner-container #about-banner {
+  background-image: url("/assets/About_Images/banner.jpg");
+}
+
+.share-container {
+  bottom: 0;
+  position: fixed;
+  z-index: 9999;
+  float: left !important;
+  width: 70px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+}
+
+.share-container .share {
+  background-color: #E99F1E;
+  color: white;
+  width: 50px;
+  bottom: 20px;
+  position: fixed;
+  cursor: pointer;
+  height: 50px;
+  border-radius: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto 0 auto;
+}
+
+.share-container .share i {
+  margin: 15px;
+  font-size: 20px;
+}
+
+.share-container .expgroup {
+  width: 50px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.share-container .expgroup a button {
+  display: list-item;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin-top: 7px;
+  font-size: 20px;
+  color: #fff;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.share-container .expgroup a button:hover {
+  background-color: #E99F1E;
+}
+
+.share-container .expgroup a:nth-child(1) button {
+  background-color: #4267B2;
+}
+
+.share-container .expgroup a:nth-child(2) button {
+  background-color: #0077B5;
+}
+
+.share-container .expgroup a:nth-child(3) button {
+  background-color: #ED4956;
+}
+
+.share-container .expgroup a:nth-child(4) button {
+  background-color: #1DA1F2;
+}
+
+.share-container .expgroup a:nth-child(5) button {
+  background-color: #FF0000;
+}
+
+.share-container .expgroup a:nth-child(6) button {
+  background-color: limegreen;
+}
+
+.share-container span {
+  font-weight: 700;
+}
+
 main {
   padding: 0;
   max-width: unset;
-}
-
-section.bg-left {
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-image: url(/assets/pattern.svg);
-  background-size: 50%;
-}
-
-@media screen and (min-width: 760px) {
-  section.bg-left {
-    background-size: 30%;
-  }
-}
-
-section.bg-right {
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-image: url(/assets/pattern.svg);
-  background-size: 50%;
-}
-
-@media screen and (min-width: 760px) {
-  section.bg-right {
-    background-size: 30%;
-  }
 }
 
 #home-banner-section-wrapper {
@@ -1382,7 +1467,7 @@ section.bg-right {
 }
 
 #home-banner-section-wrapper #banner-section .banner-slides-container .banner-slides [data-slide="0"] {
-  background-image: url(/assets/Banner_Images/Diaspora.png) !important;
+  background-image: url(/assets/Banner_Images/construct.png) !important;
 }
 
 #home-banner-section-wrapper #banner-section .banner-slides-container .banner-slides [data-slide="1"] {
@@ -1394,15 +1479,21 @@ section.bg-right {
 }
 
 #home-banner-section-wrapper #banner-section .banner-slides-container .banner-slides [data-slide="3"] {
-  background-image: url(/assets/Banner_Images/construct.png) !important;
+  background-image: url(/assets/Banner_Images/Diaspora.png) !important;
 }
 
 #home-banner-section-wrapper #banner-section .banner-slides-container .banner-slides .banner-slide-container {
   width: 100vw;
   height: 100%;
-  background: url(/assets/banner.png);
+  background-image: url(/assets/banner.png);
   background-size: cover;
-  background-position: center;
+  background-position: -35rem;
+}
+
+@media screen and (min-width: 760px) {
+  #home-banner-section-wrapper #banner-section .banner-slides-container .banner-slides .banner-slide-container {
+    background-position: center;
+  }
 }
 
 #home-banner-section-wrapper #banner-section .banner-slides-container .banner-slides .banner-slide-container .banner-slide {
@@ -1747,7 +1838,7 @@ section.bg-right {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 25rem;
+  max-width: 26rem;
 }
 
 #about-us-section .right .action-button {
