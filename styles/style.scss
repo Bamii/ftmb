@@ -2015,7 +2015,7 @@ section {
   }
 }
 .loan-content {
-  margin-top: 100px;
+  margin-top: 70px;
   .top {
     width: 100%;
     height: 50px;
@@ -2433,10 +2433,9 @@ section {
     &:first-child {
       margin-top: 0;
     }
-
-    // <defs><style>*{fill:#0F4665;}</style></defs>
     
-    img {
+    svg {
+      fill: $primary-color;
       height: 2.5rem;
       width: 2.5rem;
       margin-right: 1rem;
@@ -2447,6 +2446,10 @@ section {
     color: white;
     background: $secondary-color;
     font-weight: 500;
+
+    svg {
+      fill: $primary-color;
+    }
   }
 
   /* Create an active/current "tab button" class */
@@ -2454,6 +2457,10 @@ section {
     color: $gray-bg;
     background: $primary-color;
     font-weight: 700;
+
+    svg {
+      fill: $gray-bg;
+    }
   }
 
   /* Style the tab content */

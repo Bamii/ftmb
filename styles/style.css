@@ -935,8 +935,6 @@ body {
 }
 
 main {
-  max-width: 1440px;
-  margin: 0 auto;
   padding: 5.5rem 0 5rem 0;
 }
 
@@ -3876,7 +3874,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 .loan-content, .mortgage-content {
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 .loan-content .top, .mortgage-content .top {
@@ -4354,7 +4352,8 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
   margin-top: 0;
 }
 
-.about_us .tab button img {
+.about_us .tab button svg {
+  fill: #0F4665;
   height: 2.5rem;
   width: 2.5rem;
   margin-right: 1rem;
@@ -4366,10 +4365,18 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
   font-weight: 500;
 }
 
+.about_us .tab button:hover svg {
+  fill: #0F4665;
+}
+
 .about_us .tab button.active {
   color: #F0EFEF;
   background: #0F4665;
   font-weight: 700;
+}
+
+.about_us .tab button.active svg {
+  fill: #F0EFEF;
 }
 
 .about_us .tabcontent {

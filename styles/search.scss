@@ -1,0 +1,157 @@
+@import "header";
+@import "footer";
+@import "common";
+@import "variables";
+
+section {
+  &.bg-left {
+    background-position: -23px top;
+
+    @include minWidth($breakpoint-tablet) {
+      background-size: 20%;
+      background-position: left top;
+    }
+  }
+}
+
+.search-input-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 1.5rem 3rem;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0px 0px 10px -1px #0F466573;
+
+  .input-container {
+    flex: 1;
+    margin-right: 2rem;
+  }
+
+  @include minWidth($breakpoint-tablet) {
+    flex-direction: row;
+    padding: 2rem 3rem;
+
+    .input-container {
+      padding: 0;
+    }
+  }
+}
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  
+  .search-result {
+    $result-padding-tablet: 2rem;
+    $result-padding-mobile: 1rem;
+    
+    width: 100%;
+    display: flex;
+    border: 2px solid $gray-bg;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+
+    .icon {
+      padding: $result-padding-tablet;
+      border-right: 2px solid $gray-bg;
+
+      img {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+
+    .body {
+      flex: 1;
+      padding: $result-padding-mobile;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      
+      &::before {
+        display: none;
+        width: 5rem;
+        border: 1px solid $secondary-color;
+        content: "";
+        position: absolute;
+        top: 1.5rem;
+        left: $result-padding-mobile;
+        margin-bottom: 0.5rem;
+      }
+      
+      &::after {
+        width: 5rem;
+        border: 1px solid $secondary-color;
+        content: "";
+        bottom: $result-padding-mobile;
+        position: absolute;
+        right: $result-padding-mobile;
+      }
+
+      .title {
+        font-size: 1rem;
+        color: $primary-color;
+        padding-bottom: 0.4rem;
+      }
+
+      .subtext {
+        font-size: 0.8rem;
+        padding-bottom: 0.2rem;
+      }
+
+      .view {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        color: $secondary-color;
+        margin-top: auto;
+        cursor: pointer;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 10px -1px #0F466573;
+    }
+
+    @include minWidth($breakpoint-tablet) {
+      .icon {
+        padding: $result-padding-tablet;
+
+        img {
+          width: 5rem;
+          height: 5rem;
+        }
+      }
+  
+      .body {
+        padding: $result-padding-tablet;
+        
+        &::before {
+          left: $result-padding-tablet;
+          display: block;
+        }
+        
+        &::after {
+          bottom: $result-padding-tablet;
+          right: $result-padding-tablet;
+        }
+  
+        .title {
+          font-size: 1.3rem;
+          padding-bottom: 0.4rem;
+        }
+  
+        .subtext {
+          font-size: 1rem;
+          padding-bottom: 0.2rem;
+        }
+  
+        .view {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
