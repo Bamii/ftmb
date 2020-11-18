@@ -1,6 +1,7 @@
 @import "variables";
 
 $master-image-length: 30rem;
+$master-image-mobile-length: 15rem;
 $gutter: 0.5rem;
 
 
@@ -11,6 +12,7 @@ $gutter: 0.5rem;
     .row-half {
       display: flex;
       flex-direction: column;
+      width: unset;
 
       .gallery {
         display: flex;
@@ -21,14 +23,9 @@ $gutter: 0.5rem;
             flex-direction: column;
         
             .master-image {
-              height: $master-image-length + ($gutter * 2);
-              width: $master-image-length + ($gutter * 2);
+              height: $master-image-mobile-length + ($gutter * 2);
+              width: $master-image-mobile-length + ($gutter * 2);
               margin: 0 $gutter $gutter 0;
-
-              img {
-                height: 100%;
-                width: 100%;
-              }
             }
         
             .thumbnail-images {
@@ -36,9 +33,23 @@ $gutter: 0.5rem;
               box-sizing: border-box;
         
               .thumbnail-image {
-                width: $master-image-length / 3;
-                height: $master-image-length / 3;
+                width: $master-image-mobile-length / 3;
+                height: $master-image-mobile-length / 3;
                 margin-right: $gutter;
+              }
+            }
+
+            @include minWidth($breakpoint-tablet) {
+              .master-image {
+                height: $master-image-length + ($gutter * 2);
+                width: $master-image-length + ($gutter * 2);
+              }
+
+              .thumbnail-images {
+                .thumbnail-image {
+                  width: $master-image-length / 3;
+                  height: $master-image-length / 3;
+                }
               }
             }
           }
@@ -50,12 +61,20 @@ $gutter: 0.5rem;
               height: 100%;
         
               .thumbnail-image {
-                width: $master-image-length / 3;
+                width: $master-image-mobile-length / 3;
                 height: 50%;
                 margin-bottom: $gutter;
       
                 &:last-child {
                   margin: 0;
+                }
+              }
+            }
+
+            @include minWidth($breakpoint-tablet) {
+              .thumbnail-images {
+                .thumbnail-image {
+                  width: $master-image-length / 3;
                 }
               }
             }
@@ -66,7 +85,7 @@ $gutter: 0.5rem;
           background-position: center;
           background-size: auto 100%;
           background-repeat: no-repeat;
-          border: 1px solid $gray-bg;
+          border: 2px solid $gray-bg;
           border-radius: 4px;
         }
 
@@ -137,6 +156,37 @@ $gutter: 0.5rem;
               color: $secondary-color;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+#downloads-section {
+  .downloads-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .download-item {
+      width: 10rem;
+      margin: 0.5rem;
+
+      .image-container {
+        height: 13rem;
+        width: 100%;
+        background: black;
+      }
+
+      .details {
+        padding: 0.5rem;
+      }
+
+      @include minWidth($breakpoint-tablet) {
+        width: 15rem;
+
+        .image-container {
+          height: 17rem;
         }
       }
     }

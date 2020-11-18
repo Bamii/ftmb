@@ -12,6 +12,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: unset;
 }
 
 #media-section .split-row .row-half .gallery {
@@ -31,14 +32,9 @@
 }
 
 #media-section .split-row .row-half .gallery .gallery-column.master-column .master-image {
-  height: 31rem;
-  width: 31rem;
+  height: 16rem;
+  width: 16rem;
   margin: 0 0.5rem 0.5rem 0;
-}
-
-#media-section .split-row .row-half .gallery .gallery-column.master-column .master-image img {
-  height: 100%;
-  width: 100%;
 }
 
 #media-section .split-row .row-half .gallery .gallery-column.master-column .thumbnail-images {
@@ -50,9 +46,20 @@
 }
 
 #media-section .split-row .row-half .gallery .gallery-column.master-column .thumbnail-images .thumbnail-image {
-  width: 10rem;
-  height: 10rem;
+  width: 5rem;
+  height: 5rem;
   margin-right: 0.5rem;
+}
+
+@media screen and (min-width: 760px) {
+  #media-section .split-row .row-half .gallery .gallery-column.master-column .master-image {
+    height: 31rem;
+    width: 31rem;
+  }
+  #media-section .split-row .row-half .gallery .gallery-column.master-column .thumbnail-images .thumbnail-image {
+    width: 10rem;
+    height: 10rem;
+  }
 }
 
 #media-section .split-row .row-half .gallery .gallery-column.slave-column .thumbnail-images {
@@ -67,7 +74,7 @@
 }
 
 #media-section .split-row .row-half .gallery .gallery-column.slave-column .thumbnail-images .thumbnail-image {
-  width: 10rem;
+  width: 5rem;
   height: 50%;
   margin-bottom: 0.5rem;
 }
@@ -76,11 +83,17 @@
   margin: 0;
 }
 
+@media screen and (min-width: 760px) {
+  #media-section .split-row .row-half .gallery .gallery-column.slave-column .thumbnail-images .thumbnail-image {
+    width: 10rem;
+  }
+}
+
 #media-section .split-row .row-half .gallery .media-image {
   background-position: center;
   background-size: auto 100%;
   background-repeat: no-repeat;
-  border: 1px solid #F0EFEF;
+  border: 2px solid #F0EFEF;
   border-radius: 4px;
 }
 
@@ -156,5 +169,40 @@
 
 #media-section .split-row .row-half .pagination .pagination-navigation span.active {
   color: #E99F1E;
+}
+
+#downloads-section .downloads-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#downloads-section .downloads-list .download-item {
+  width: 10rem;
+  margin: 0.5rem;
+}
+
+#downloads-section .downloads-list .download-item .image-container {
+  height: 13rem;
+  width: 100%;
+  background: black;
+}
+
+#downloads-section .downloads-list .download-item .details {
+  padding: 0.5rem;
+}
+
+@media screen and (min-width: 760px) {
+  #downloads-section .downloads-list .download-item {
+    width: 15rem;
+  }
+  #downloads-section .downloads-list .download-item .image-container {
+    height: 17rem;
+  }
 }
 /*# sourceMappingURL=media.css.map */

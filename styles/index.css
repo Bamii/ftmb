@@ -1356,6 +1356,10 @@ section.bg-right {
   background-image: url("/assets/gallery.png");
 }
 
+#banner-container #downloads-banner {
+  background-image: url("/assets/downloads_banner.png");
+}
+
 .share-container {
   bottom: 0;
   position: fixed;
@@ -1846,6 +1850,7 @@ main {
 #about-us-section .left .home-svg .middle-part {
   height: 33rem;
   background-image: url(/assets/Home_svg/middle_image.jpg);
+  background-position: center 4rem;
   right: 0;
   position: absolute;
   left: 5rem;
@@ -1890,11 +1895,16 @@ main {
   #about-us-section .left .home-svg {
     width: 40rem;
   }
+  #about-us-section .left .home-svg .svg-part {
+    width: 17rem;
+  }
   #about-us-section .left .home-svg .left-part {
-    left: 7rem;
+    left: 4rem;
   }
   #about-us-section .left .home-svg .middle-part {
-    left: 15rem;
+    left: 12rem;
+    width: 19rem;
+    background-position: center 5rem;
   }
   #about-us-section .left .home-svg .right-part {
     left: 22rem;
@@ -1908,6 +1918,12 @@ main {
 @media screen and (min-width: 760px) {
   #about-us-section .right {
     padding-top: 8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #about-us-section .right {
+    padding-top: 10rem;
   }
 }
 

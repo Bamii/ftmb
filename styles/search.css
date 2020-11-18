@@ -1356,6 +1356,10 @@ section.bg-right {
   background-image: url("/assets/gallery.png");
 }
 
+#banner-container #downloads-banner {
+  background-image: url("/assets/downloads_banner.png");
+}
+
 .share-container {
   bottom: 0;
   position: fixed;

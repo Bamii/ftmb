@@ -16,16 +16,13 @@
   let isMenuOpen = false;
   let currentInternetBankingTab = 0;
 
-  console.log("hihi")
   $(".expgroup").hide();
-  $(".share").click(function(){ 
-    console.log("hihi")
+  $(".share").click(function(){
     $(".expgroup").animate({height:'toggle'});
   });
 
   Array.from(menuLinks).forEach((link) => {
     link.onclick = function (e) {
-      console.log("dfd")
       openMenu(e);
     };
   });
@@ -34,7 +31,6 @@
     closeButton.onclick = function(e) {
       const currMenuContent = document.querySelector(`[data-menu-content-index="${currentLinkIndex}"]`);
     
-      console.log("sds")
       isMenuOpen = false;
       internetBankingWrapper.classList.remove("visible");
       searchWrapper.classList.remove("visible");

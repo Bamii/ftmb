@@ -331,6 +331,7 @@ main {
       .middle-part {
         height: 33rem;
         background-image: url(/assets/Home_svg/middle_image.jpg);
+        background-position: center 4rem;
         right: 0;
         position: absolute;
         left: 5rem;
@@ -376,13 +377,18 @@ main {
       @include minWidth($breakpoint-desktop) {
         width: 40rem;
         
+        .svg-part {
+          width: 17rem;
+        }
+
         .left-part {
-          left: 7rem;
+          left: 4rem;
         }
 
         .middle-part {
-          left: 15rem;
-          // height: 30rem;
+          left: 12rem;
+          width: 19rem;
+          background-position: center 5rem;
         }
 
         .right-part {
@@ -397,6 +403,10 @@ main {
 
     @include minWidth($breakpoint-tablet) {
       padding-top: 8rem;
+    }
+
+    @include minWidth($breakpoint-desktop) {
+      padding-top: 10rem;
     }
 
     .row-contents {
