@@ -1207,7 +1207,7 @@ section.bg-right {
   letter-spacing: 0.9px;
   color: #FFFFFF;
   background: rgba(16, 17, 20, 0.5);
-  font: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 2rem;
   text-transform: uppercase;
   width: 100%;
@@ -1350,6 +1350,10 @@ section.bg-right {
 
 #banner-container #about-banner {
   background-image: url("/assets/About_Images/banner.jpg");
+}
+
+#banner-container #media-banner {
+  background-image: url("/assets/gallery.png");
 }
 
 .share-container {

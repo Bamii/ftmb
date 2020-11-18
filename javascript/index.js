@@ -1,4 +1,4 @@
-function index() {
+(function () {
   const topBar = document.getElementById("top-strip-container");
   const menuLinks = document.getElementsByClassName('menu-link');
   const menuWrapper = document.getElementById("menu-wrapper");
@@ -30,8 +30,7 @@ function index() {
 
   Array.from(faqAccordionTitles).forEach(title => {
     title.onclick = function({ target }) {
-      const index = target.dataset.accordionTitle;
-      console.log(index)
+      const index = target.dataset.faqAccordionTitle;
       document.querySelector(`[data-faq-accordion-content="${index}"]`).classList.toggle("visible");
     }
   });
@@ -169,6 +168,4 @@ function index() {
       element.classList.remove("animate__fadeIn");
     }, 3000);
   }
-}
-
-index();
+})();

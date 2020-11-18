@@ -34,6 +34,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/media.css" />
   </head>
   <body>
     <header>
@@ -93,7 +94,7 @@
                 <div data-menu-index="4" class="menu-link">
                   <a href="/index.html">Investor Relations</a>
                 </div>
-                <div data-menu-index="5" class="menu-link"><a href="/index.html">Media</a></div>
+                <div data-menu-index="5" class="menu-link"><a href="/media.html">Media</a></div>
               </div>
             </div>
           </div>
@@ -396,7 +397,7 @@
                 </div>
               </div>
               <div data-mobile-menu-index="5" class="mobile-menu-link">
-                <div class="mobile-menu-header">Media</div>
+                <div class="mobile-menu-header"><a href="/media.html">Media</a></div>
                 <div class="mobile-menu-contents">
                   <div class="menu-content-column">
                     <div class="column-title">Blog</div>
@@ -468,149 +469,82 @@
     </header>
 
     <main>
-        <section id="banner-container" class="top">
-          <div class="banner">
-            <div class="banner-text">Media</div>
+      <section id="banner-container" class="top">
+        <div id="media-banner" class="banner">
+          <div class="banner-text">Gallery</div>
+        </div>
+      </section>
+
+      <div id="media-section" class="section-wrapper">
+        <section class="section-container split-row">
+          <div class="row-half">
+            <div class="gallery">
+              <div class="gallery-column master-column">
+                <div
+                  id="master-media-image"
+                  class="master-image media-image"
+                >
+                </div>
+                <div class="thumbnail-images">
+                  <div
+                   class="thumbnail-image media-image"
+                  >
+                  </div>
+                  <div
+                   class="thumbnail-image media-image"
+                  >
+                  </div>
+                  <div
+                   class="thumbnail-image media-image"
+                  >
+                  </div>
+                </div>
+              </div>
+              <div class="gallery-column slave-column">
+                <div class="thumbnail-images">
+                  <div
+                   class="thumbnail-image media-image"
+                  >
+                  </div>
+                  <div
+                   class="thumbnail-image media-image"
+                  >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row-half right-row">
+            <div class="details">
+              <span id="media-header" class="large-text">
+                ---
+              </span> <br> <br>
+              <span id="media-subtext" class="sub-text">
+                ---
+              </span>
+              <div class="action-button">
+                <a id="media-action" class="btn plain" href="#">Know More.</a>
+              </div>
+            </div>
+
+            <div class="pagination">
+              <div id="pages-container" class="pages">
+                <!-- <div data-pagination="1" class="page active">1</div>
+                <div data-pagination="2" class="page">2</div>
+                <div data-pagination="3" class="page">3</div>
+                <div data-pagination="4" class="page">4</div>
+                <div data-pagination="5" class="page">5</div>
+                <div data-pagination="6" class="page">6</div> -->
+              </div>
+              <div class="pagination-navigation">
+                <span class="">Back</span>
+                <span class="active">Next</span>
+              </div>
+            </div>
           </div>
         </section>
-      <div class="medially container">
-        <div class="row">
-          <div class="col-md-8">
-            <h2>Publications</h2>
-            <div class="what medial">
-              <div class="head"></div>
-              <h2>By impossible of in difficulty discovered celebrated ye.</h2>
-              <span>NOV 11 2019</span>
-              <p>
-                Departure so attention pronounce satisfied daughters am. But shy
-                tedious pressed studied opinion entered windows off.
-              </p>
-
-              <a href="#">Read More</a>
-            </div>
-            <div class="chaty medial">
-              <div class="head"></div>
-              <h2>By impossible of in difficulty discovered celebrated ye.</h2>
-              <span>NOV 11 2019</span>
-              <p>
-                Departure so attention pronounce satisfied daughters am. But shy
-                tedious pressed studied opinion entered windows off.
-              </p>
-
-              <a href="#">Read More</a>
-            </div>
-            <div class="cally medial">
-              <div class="head"></div>
-              <h2>By impossible of in difficulty discovered celebrated ye.</h2>
-              <span>NOV 11 2019</span>
-              <p>
-                Departure so attention pronounce satisfied daughters am. But shy
-                tedious pressed studied opinion entered windows off.
-              </p>
-
-              <a href="#">Read More</a>
-            </div>
-          </div>
-          <div class="col-md-1"></div>
-          <div class="col-md-3">
-            <h2>Jump To</h2>
-            <li><span>>></span> Publications</li>
-            <li id="news"><span>>></span> News</li>
-            <li id="gallery"><span>>></span> Gallery</li>
-            <li id="video"><span>>></span> Videos</li>
-            <li id="document"><span>>></span> Documents</li>
-          </div>
-          <div class="col-md-8 news">
-            <div class="newy">
-              <h2>News</h2>
-              <div class="first">
-                <div class="pic"></div>
-                <div class="text">
-                  <div class="date">
-                    <h2>
-                      By impossible of in difficulty discovered celebrated
-                    </h2>
-                    <span>NOV 11 2019</span>
-                  </div>
-                  <p>
-                    Departure so attention pronounce satisfied daughters am. But
-                    shy tedious pressed studied opinion entered windows off.
-                    Advantage dependent suspicion convinced...
-                  </p>
-                  <a href="#">Read More</a>
-                </div>
-              </div>
-              <div class="first sec">
-                <div class="pic"></div>
-                <div class="text">
-                  <div class="date">
-                    <h2>
-                      By impossible of in difficulty discovered celebrated
-                    </h2>
-                    <span>NOV 10 2019</span>
-                  </div>
-                  <p>
-                    Departure so attention pronounce satisfied daughters am. But
-                    shy tedious pressed studied opinion entered windows off.
-                    Advantage dependent suspicion convinced...
-                  </p>
-                  <a href="#">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-8 gallery">
-            <div class="gallery">
-              <h2>Gallery</h2>
-              <div class="contain-gallery-one imagery">
-                <div class="first-image"></div>
-              </div>
-              <div class="contain-gallery-two imagery">
-                <div class="second-image"></div>
-              </div>
-              <div class="contain-gallery-three imagery">
-                <div class="third-image"></div>
-              </div>
-              <div class="contain-gallery-four imagery">
-                <div class="fourth-image"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-8 video">
-            <div class="video-div">
-              <h2>Videos</h2>
-              <div class="video">
-                <iframe
-                  width="100%"
-                  height="400"
-                  src="https://www.youtube.com/embed/vr6GCpQ2zoM"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-                <h4>International Women and Mother's Day</h4>
-                <p>0:11</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-8 documnet">
-            <div class="document">
-              <h2>Documents</h2>
-              <div class="document-one">
-                <h2>Profit Sharing (PPT)</h2>
-                <button>Download <i class="fas fa-download"></i></button>
-              </div>
-              <div class="document-one">
-                <h2>Privacy Policy (PDF)</h2>
-                <button>Download <i class="fas fa-download"></i></button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-
+      
       <div class="helpful-tool container">
         <h2>Helpful Tools</h2>
         <div class="row">
@@ -661,7 +595,8 @@
           </div>
         </div>
       </div>
-    <div class="share-container">
+      
+      <div class="share-container">
         <div class="expgroup">
             <a href="https://web.facebook.com/ft.mortgagebankplc.7 " target="_blank"><button class="icon gplus">
                 <i class="fab fa-facebook-f"></i>
@@ -785,6 +720,7 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/javascript/script.js"></script>
+    <script type="text/javascript" src="/javascript/gallery.js"></script>
     <script type="text/javascript" src="/javascript/menu.js"></script>
     <!-- <script src="js/wow.min.js"></script>
   <script>

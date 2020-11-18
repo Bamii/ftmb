@@ -302,7 +302,7 @@ section {
     letter-spacing: 0.9px;
     color: #FFFFFF;
     background: rgba(16, 17, 20, 0.5);
-    font: $emphasis-font;
+    font-family: $emphasis-font;
     font-size: 2rem;
     text-transform: uppercase;
     width: 100%;
@@ -411,6 +411,9 @@ section {
   }
   #about-banner {
     background-image: url("/assets/About_Images/banner.jpg") ;
+  }
+  #media-banner {
+    background-image: url("/assets/gallery.png") ;
   }
 }
 

@@ -1,0 +1,144 @@
+@import "variables";
+
+$master-image-length: 30rem;
+$gutter: 0.5rem;
+
+
+#media-section {
+  .split-row {
+    align-items: flex-start;
+
+    .row-half {
+      display: flex;
+      flex-direction: column;
+
+      .gallery {
+        display: flex;
+      
+        .gallery-column {
+          &.master-column {
+            display: flex;
+            flex-direction: column;
+        
+            .master-image {
+              height: $master-image-length + ($gutter * 2);
+              width: $master-image-length + ($gutter * 2);
+              margin: 0 $gutter $gutter 0;
+
+              img {
+                height: 100%;
+                width: 100%;
+              }
+            }
+        
+            .thumbnail-images {
+              display: flex;
+              box-sizing: border-box;
+        
+              .thumbnail-image {
+                width: $master-image-length / 3;
+                height: $master-image-length / 3;
+                margin-right: $gutter;
+              }
+            }
+          }
+      
+          &.slave-column {
+            .thumbnail-images {
+              display: flex;
+              flex-direction: column;
+              height: 100%;
+        
+              .thumbnail-image {
+                width: $master-image-length / 3;
+                height: 50%;
+                margin-bottom: $gutter;
+      
+                &:last-child {
+                  margin: 0;
+                }
+              }
+            }
+          }
+        }
+
+        .media-image {
+          background-position: center;
+          background-size: auto 100%;
+          background-repeat: no-repeat;
+          border: 1px solid $gray-bg;
+          border-radius: 4px;
+        }
+
+        .thumbnail-image {
+          cursor: pointer;
+        }
+      }
+
+      .details {
+        .large-text {
+          text-transform: uppercase;
+          color: $primary-color;
+          font-family: $emphasis-font;
+          font-weight: bold;
+        }
+      }
+
+      .pagination {
+        display: flex;
+        flex-direction: column;
+        max-width: 18rem;
+        margin-top: 2rem;
+
+        .pages {
+          display: flex;
+          flex-wrap: wrap;
+
+          .page {
+            padding: 0.8rem 1.5rem;
+            border: 1px solid #C1BABA;
+            font-size: 1.5rem;
+            color: $primary-color;
+            background: $gray-bg;
+            margin: 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+
+            &.active {
+              color: $secondary-color;
+              border: 1px solid $secondary-color;
+            }
+            
+            &:hover {
+              border: 1px solid $secondary-color;
+            }
+          }
+        }
+
+        .pagination-navigation {
+          align-self: flex-end;
+          padding: 0.8rem 0;
+
+          span {
+            font-size: 0.8rem;
+            margin-right: 0.8rem;
+            cursor: pointer;
+
+            &:first-child {
+              &::after {
+               content: "|";
+               margin-left: 0.8rem;
+               color: $primary-color; 
+              }
+            }
+
+            &.active {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

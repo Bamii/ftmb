@@ -1,4 +1,4 @@
-function menu($) {
+(function ($) {
   const menuLinks = document.getElementsByClassName("menu-link");
   const menuWrapper = document.getElementById("menu-wrapper");
   const searchWrapper = document.getElementById("search-wrapper");
@@ -123,6 +123,4 @@ function menu($) {
   function openMobileMenu() {
     menuWrapper.classList.toggle("visible");
   }
-};
-
-menu($);
+})($)

@@ -1,0 +1,160 @@
+#media-section .split-row {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#media-section .split-row .row-half {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#media-section .split-row .row-half .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#media-section .split-row .row-half .gallery .gallery-column.master-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#media-section .split-row .row-half .gallery .gallery-column.master-column .master-image {
+  height: 31rem;
+  width: 31rem;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+#media-section .split-row .row-half .gallery .gallery-column.master-column .master-image img {
+  height: 100%;
+  width: 100%;
+}
+
+#media-section .split-row .row-half .gallery .gallery-column.master-column .thumbnail-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#media-section .split-row .row-half .gallery .gallery-column.master-column .thumbnail-images .thumbnail-image {
+  width: 10rem;
+  height: 10rem;
+  margin-right: 0.5rem;
+}
+
+#media-section .split-row .row-half .gallery .gallery-column.slave-column .thumbnail-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+#media-section .split-row .row-half .gallery .gallery-column.slave-column .thumbnail-images .thumbnail-image {
+  width: 10rem;
+  height: 50%;
+  margin-bottom: 0.5rem;
+}
+
+#media-section .split-row .row-half .gallery .gallery-column.slave-column .thumbnail-images .thumbnail-image:last-child {
+  margin: 0;
+}
+
+#media-section .split-row .row-half .gallery .media-image {
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  border: 1px solid #F0EFEF;
+  border-radius: 4px;
+}
+
+#media-section .split-row .row-half .gallery .thumbnail-image {
+  cursor: pointer;
+}
+
+#media-section .split-row .row-half .details .large-text {
+  text-transform: uppercase;
+  color: #0F4665;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+}
+
+#media-section .split-row .row-half .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 18rem;
+  margin-top: 2rem;
+}
+
+#media-section .split-row .row-half .pagination .pages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#media-section .split-row .row-half .pagination .pages .page {
+  padding: 0.8rem 1.5rem;
+  border: 1px solid #C1BABA;
+  font-size: 1.5rem;
+  color: #0F4665;
+  background: #F0EFEF;
+  margin: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#media-section .split-row .row-half .pagination .pages .page.active {
+  color: #E99F1E;
+  border: 1px solid #E99F1E;
+}
+
+#media-section .split-row .row-half .pagination .pages .page:hover {
+  border: 1px solid #E99F1E;
+}
+
+#media-section .split-row .row-half .pagination .pagination-navigation {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 0.8rem 0;
+}
+
+#media-section .split-row .row-half .pagination .pagination-navigation span {
+  font-size: 0.8rem;
+  margin-right: 0.8rem;
+  cursor: pointer;
+}
+
+#media-section .split-row .row-half .pagination .pagination-navigation span:first-child::after {
+  content: "|";
+  margin-left: 0.8rem;
+  color: #0F4665;
+}
+
+#media-section .split-row .row-half .pagination .pagination-navigation span.active {
+  color: #E99F1E;
+}
+/*# sourceMappingURL=media.css.map */

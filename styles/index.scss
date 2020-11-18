@@ -293,6 +293,7 @@ main {
 
   @include minWidth($breakpoint-tablet) {
     padding-top: 0rem;
+    padding-bottom: 8rem;
   }
 
   .row-half {
@@ -302,11 +303,91 @@ main {
   .left {
     align-self: flex-start;
 
-    img {
+    .home-svg {
+      position: relative;
+      text-align: center;
+      display: flex;
+      justify-content: center;
       width: 100%;
+      height: 35rem;
 
+      .svg-part {
+        width: 12rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .left-part {
+        height: 23rem;
+        background-image: url(/assets/Home_svg/left_image.jpg);
+        right: 0;
+        position: absolute;
+        left: 0;
+        border-radius: 0 0 15rem 15rem;
+        border: 2px solid $secondary-color;
+      }
+      
+      .middle-part {
+        height: 33rem;
+        background-image: url(/assets/Home_svg/middle_image.jpg);
+        right: 0;
+        position: absolute;
+        left: 5rem;
+        z-index: 10;
+        border-radius: 0 0 15rem 15rem;
+        border: 2px solid $primary-color;
+      }
+      
+      .right-part {
+        height: 12rem;
+        background-image: url(/assets/Home_svg/right_image.jpg);
+        right: 0;
+        position: absolute;
+        left: 10rem;
+        top: 7rem;
+        border-radius: 50%;
+        border: 2px solid $gray-bg;
+      }
+      
+      @include minWidth($breakpoint-tablet) {
+        height: unset;
+        width: 25rem;
+
+        .svg-part {
+          width: 15rem;
+        }
+
+        .left-part {
+          left: -2rem;
+        }
+
+        .middle-part {
+          left: 5rem;
+        }
+
+        .right-part {
+          left: 11rem;
+          top: 6rem;
+          height: 15rem;
+        }
+      }
+      
       @include minWidth($breakpoint-desktop) {
         width: 40rem;
+        
+        .left-part {
+          left: 7rem;
+        }
+
+        .middle-part {
+          left: 15rem;
+          // height: 30rem;
+        }
+
+        .right-part {
+          left: 22rem;
+        }
       }
     }
   }
@@ -315,7 +396,7 @@ main {
     padding-top: 0;
 
     @include minWidth($breakpoint-tablet) {
-      padding-top: 12rem;
+      padding-top: 8rem;
     }
 
     .row-contents {
@@ -963,7 +1044,7 @@ main {
             }
           }
           
-          .accordion-content {
+          .accordion-contents {
             width: 100%;
             display: none;
             padding: 1rem 1rem 2rem 1rem;
