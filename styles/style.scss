@@ -2563,6 +2563,7 @@ section {
       }
     }
 
+    .downloads-container,
     .profiles-container {
       width: 100%;
       display: flex;
@@ -2573,6 +2574,7 @@ section {
         justify-content: flex-start;
       }
 
+      .download-item,
       .profile {
         text-align: center;
         width: 2rem;
@@ -2604,6 +2606,7 @@ section {
           height: 20rem;
         }
 
+        .details,
         .profile-name {
           background: $transluscent-bg;
           color: white;
@@ -2621,6 +2624,31 @@ section {
             margin: 0;
             color: white;
             font-size: 0.8rem;
+          }
+        }
+
+        .details {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 1rem;
+
+          .name {
+            font-size: 0.9rem;
+            text-align: left;
+            color: $gray-bg;
+          }
+
+          span {
+            align-self: flex-end;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: $secondary-color;
+            cursor: pointer;
+            
+            &:hover {
+              color: $primary-color;
+            }
           }
         }
       }

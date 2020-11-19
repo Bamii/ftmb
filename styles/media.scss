@@ -182,13 +182,17 @@ $gutter: 0.5rem;
         padding: 0.5rem;
       }
 
-      @include minWidth($breakpoint-tablet) {
+    }
+    @include minWidth($breakpoint-tablet) {
+      .download-item {
         width: 15rem;
-
+        margin: 1rem;
+  
         .image-container {
           height: 17rem;
         }
       }
     }
+
   }
 }

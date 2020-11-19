@@ -4515,6 +4515,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
   background-size: cover;
 }
 
+.about_us .tabcontent .downloads-container,
 .about_us .tabcontent .profiles-container {
   width: 100%;
   display: -webkit-box;
@@ -4528,6 +4529,7 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
 }
 
 @media screen and (min-width: 760px) {
+  .about_us .tabcontent .downloads-container,
   .about_us .tabcontent .profiles-container {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -4535,6 +4537,9 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
   }
 }
 
+.about_us .tabcontent .downloads-container .download-item,
+.about_us .tabcontent .downloads-container .profile,
+.about_us .tabcontent .profiles-container .download-item,
 .about_us .tabcontent .profiles-container .profile {
   text-align: center;
   width: 2rem;
@@ -4560,23 +4565,39 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
           flex-direction: column;
 }
 
+.about_us .tabcontent .downloads-container .download-item:hover,
+.about_us .tabcontent .downloads-container .profile:hover,
+.about_us .tabcontent .profiles-container .download-item:hover,
 .about_us .tabcontent .profiles-container .profile:hover {
   -webkit-box-shadow: 0px 0px 7px -2px #B4B4B4;
           box-shadow: 0px 0px 7px -2px #B4B4B4;
   border: 2px solid #E99F1E;
 }
 
+.about_us .tabcontent .downloads-container .download-item:hover .profile-name,
+.about_us .tabcontent .downloads-container .profile:hover .profile-name,
+.about_us .tabcontent .profiles-container .download-item:hover .profile-name,
 .about_us .tabcontent .profiles-container .profile:hover .profile-name {
   padding: 1.2rem 0;
 }
 
 @media screen and (min-width: 1024px) {
+  .about_us .tabcontent .downloads-container .download-item,
+  .about_us .tabcontent .downloads-container .profile,
+  .about_us .tabcontent .profiles-container .download-item,
   .about_us .tabcontent .profiles-container .profile {
     width: 14rem;
     height: 20rem;
   }
 }
 
+.about_us .tabcontent .downloads-container .download-item .details,
+.about_us .tabcontent .downloads-container .download-item .profile-name,
+.about_us .tabcontent .downloads-container .profile .details,
+.about_us .tabcontent .downloads-container .profile .profile-name,
+.about_us .tabcontent .profiles-container .download-item .details,
+.about_us .tabcontent .profiles-container .download-item .profile-name,
+.about_us .tabcontent .profiles-container .profile .details,
 .about_us .tabcontent .profiles-container .profile .profile-name {
   background: rgba(16, 17, 20, 0.8);
   color: white;
@@ -4585,16 +4606,75 @@ section .bot .container ul li:hover span, .loanMortages .bot .container ul li:ho
   border-radius: 0 0 8px 8px;
 }
 
+.about_us .tabcontent .downloads-container .download-item .details .name,
+.about_us .tabcontent .downloads-container .download-item .profile-name .name,
+.about_us .tabcontent .downloads-container .profile .details .name,
+.about_us .tabcontent .downloads-container .profile .profile-name .name,
+.about_us .tabcontent .profiles-container .download-item .details .name,
+.about_us .tabcontent .profiles-container .download-item .profile-name .name,
+.about_us .tabcontent .profiles-container .profile .details .name,
 .about_us .tabcontent .profiles-container .profile .profile-name .name {
   color: #E99F1E;
   font-size: 1.1rem;
 }
 
+.about_us .tabcontent .downloads-container .download-item .details p,
+.about_us .tabcontent .downloads-container .download-item .profile-name p,
+.about_us .tabcontent .downloads-container .profile .details p,
+.about_us .tabcontent .downloads-container .profile .profile-name p,
+.about_us .tabcontent .profiles-container .download-item .details p,
+.about_us .tabcontent .profiles-container .download-item .profile-name p,
+.about_us .tabcontent .profiles-container .profile .details p,
 .about_us .tabcontent .profiles-container .profile .profile-name p {
   padding: 0.2rem 0;
   margin: 0;
   color: white;
   font-size: 0.8rem;
+}
+
+.about_us .tabcontent .downloads-container .download-item .details,
+.about_us .tabcontent .downloads-container .profile .details,
+.about_us .tabcontent .profiles-container .download-item .details,
+.about_us .tabcontent .profiles-container .profile .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 1rem;
+}
+
+.about_us .tabcontent .downloads-container .download-item .details .name,
+.about_us .tabcontent .downloads-container .profile .details .name,
+.about_us .tabcontent .profiles-container .download-item .details .name,
+.about_us .tabcontent .profiles-container .profile .details .name {
+  font-size: 0.9rem;
+  text-align: left;
+  color: #F0EFEF;
+}
+
+.about_us .tabcontent .downloads-container .download-item .details span,
+.about_us .tabcontent .downloads-container .profile .details span,
+.about_us .tabcontent .profiles-container .download-item .details span,
+.about_us .tabcontent .profiles-container .profile .details span {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #E99F1E;
+  cursor: pointer;
+}
+
+.about_us .tabcontent .downloads-container .download-item .details span:hover,
+.about_us .tabcontent .downloads-container .profile .details span:hover,
+.about_us .tabcontent .profiles-container .download-item .details span:hover,
+.about_us .tabcontent .profiles-container .profile .details span:hover {
+  color: #0F4665;
 }
 
 .about_us .tabcontent p {

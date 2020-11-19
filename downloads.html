@@ -34,7 +34,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="stylesheet" href="/styles/media.css" />
+    <!-- <link rel="stylesheet" href="/styles/media.css" /> -->
   </head>
   <body>
     <header>
@@ -475,7 +475,7 @@
         </div>
       </section>
 
-      <div id="downloads-section" class="section-wrapper">
+      <!-- <div id="downloads-section" class="section-wrapper">
         <section class="section-container">
           <div class="downloads-list">
             <div class="download-item">
@@ -498,6 +498,73 @@
             </div>
           </div>
         </section>
+      </div> -->
+
+      <div class="about_us container">
+        <div class="tab">
+          <button
+            id="defaultOpen"
+            class="tablinks next-one"
+            onclick="openCity(event, 'Downloads')"
+          >
+            Downloads
+          </button>
+          <button
+            class="tablinks next-one"
+            onclick="openCity(event, 'Others')"
+          >
+            Others
+          </button>
+        </div>
+
+        <div id="Downloads" class="tabcontent">
+          <h2 class="head_core">Downloads</h2>
+          <div class="downloads-container">
+            <div
+              class="download-item"
+              style="background-image: url(/images/image.png)"
+            >
+              <div class="details">
+                <h5 class="name">FIRS 2019 document to download</h5>
+                <span>download</span>
+              </div>
+            </div>
+            <div
+              class="download-item"
+              style="background-image: url(/images/image.png)"
+            >
+              <div class="details">
+                <h5 class="name">FIRS 2019 document to download</h5>
+                <span>download</span>
+              </div>
+            </div>
+            <div
+              class="download-item"
+              style="background-image: url(/images/image.png)"
+            >
+              <div class="details">
+                <h5 class="name">FIRS 2019 document to download</h5>
+                <span>download</span>
+              </div>
+            </div>
+            <div
+              class="download-item"
+              style="background-image: url(/images/image.png)"
+            >
+              <div class="details">
+                <h5 class="name">FIRS 2019 document to download</h5>
+                <span>download</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="Others" class="tabcontent">
+          <h2>Others</h2>
+          <p>
+            No content present.
+          </p>
+        </div>
       </div>
       
       <div class="helpful-tool container">
