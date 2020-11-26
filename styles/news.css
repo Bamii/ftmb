@@ -61,10 +61,10 @@ section.bg-left {
   text-align: right;
   color: #E99F1E;
   cursor: pointer;
-  font-family: "Roboto Condensed", sans-serif #news-section .news-items .news-item .details .action;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-#news-section .news-items .news-item .details .action :hover {
+#news-section .news-items .news-item .details .action:hover {
   color: #0F4665;
 }
 
