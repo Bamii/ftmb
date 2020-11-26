@@ -1096,6 +1096,10 @@ section.bg-right, .bg-right.loanMortages, .bg-right.rentLoan {
   background-image: url("/assets/downloads_banner.png");
 }
 
+#banner-container #news-banner {
+  background-image: url("/assets/news_banner.png");
+}
+
 .share-container {
   bottom: 0;
   position: fixed;
