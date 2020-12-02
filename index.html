@@ -54,7 +54,7 @@
             <div class="extra-menu-links-wrapper">
               <div class="extra-menu-links">
                 <div class="extra-menu-link">
-                  <div id="search-button" class="menu-text">
+                  <div data-modal-target="search-wrapper" id="search-button" class="menu-text">
                     <img src="/assets/search_icon.svg" alt="Search Icon" />
                   </div>
                 </div>
@@ -62,7 +62,7 @@
                   <div class="extra-menu-link-image">
                     <img src="/assets/lock_icon.svg" alt="" />
                   </div>
-                  <div id="internet-banking-button" class="menu-text">
+                  <div data-modal-target="internet-banking-wrapper" id="internet-banking-button" class="menu-text">
                     Internet Banking
                   </div>
                 </div>
@@ -418,9 +418,9 @@
         </div>
       </div>
 
-      <div id="search-wrapper" class="">
+      <div id="search-wrapper" class="ftmb-modal">
         <div class="mask">
-          <div id="search-close" class="mask-close">(x) close</div>
+          <div data-modal-close="search-wrapper" id="search-close" class="mask-close">(x) close</div>
           <div class="mask-contents">
             <div class="mask-header">Search</div>
             <div class="input-container">
@@ -438,9 +438,9 @@
         <div class="mobile-search-container"></div>
       </div>
 
-      <div id="internet-banking-wrapper" class="">
+      <div id="internet-banking-wrapper" class="ftmb-modal">
         <div class="mask">
-          <div id="internet-banking-close" class="mask-close">(x) close</div>
+          <div data-modal-close="internet-banking-wrapper" id="internet-banking-close" class="mask-close">(x) close</div>
           <div class="mask-contents">
             <div class="mask-header">
               Get all you need with our Online Banking Application
@@ -1095,14 +1095,25 @@
         >
           <div class="left row-half">
             <div class="loan-calculator-card">
-              <div class="input-container">
-                <img src="/assets/Interest Rate.svg" alt="svg." />
-                <input
-                  type="text"
-                  name=""
-                  placeholder="Interest Rate."
-                  class="input"
-                />
+              <div class="input-grp">
+                <div class="input-container">
+                  <img src="/assets/Interest Rate.svg" alt="svg." />
+                  <input
+                    type="text"
+                    name=""
+                    placeholder="Interest Rate."
+                    class="input"
+                  />
+                </div>
+                <div class="input-container">
+                  <img src="/assets/monthly_income.svg" alt="svg." />
+                  <input
+                    type="text"
+                    name=""
+                    placeholder="Monthly income."
+                    class="input"
+                  />
+                </div>
               </div>
               <div class="input-container">
                 <img src="/assets/coins.svg" alt="svg." />
@@ -1252,50 +1263,112 @@
         <div class="mask">
           <div id="loan-calculator-close" class="mask-close">(x) close</div>
           <div class="mask-contents">
-            <div class="mask-header">
-              <div class="small-text">Monthly Payments</div>
-              <div class="monthly-payments">
-                <img src="/assets/naira.svg" alt="" />
-                525,000.45
+            <div class="split-row">
+              <div class="row-half">
+                <div class="eligibility negative">You Are Not Eligible</div>
+                <div class="disclaimer">
+                  <div class="disclaimer-title">Why?</div>
+                  <div class="disclaimer-text">
+                    Your monthly repayment on loan request made to our bank cannot exceed one-third of your monthly income.
+                  </div>
+                </div>
+                <div class="disclaimer">
+                  <div class="disclaimer-title">Disclaimer</div>
+                  <div class="disclaimer-text">
+                    Does not include Upfront Charges (Commitment Fee, Service Charge
+                    & Management Fee). This is also assumed that the interest rate
+                    remains the same.
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row-half master">
+                <div class="mask-header">
+                  <div class="small-text">Monthly Payments</div>
+                  <div class="monthly-payments">
+                    <img src="/assets/naira.svg" alt="" />
+                    525,000.45
+                  </div>
+                </div>
+                <div class="calculator-table">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>Total Principal Paid</td>
+                        <td><img src="/assets/naira.svg" alt="" />10,000,000.00</td>
+                      </tr>
+                      <tr>
+                        <td>Total Interest Paid</td>
+                        <td>
+                          <img src="/assets/naira.svg" alt="" />
+                          625,000.75
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td>Total Repayment</td>
+                        <td>
+                          <img src="/assets/naira.svg" alt="" />
+                          10,625,000.75
+                        </td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+                <div class="calculator-table-extra-details">
+                  <div class="calculator-table-extra-detail">Interest Rate: <span>24%</span></div>
+                  <div class="calculator-table-extra-detail">Tenor: <span>12 Months</span></div>
+                </div>
+                <div class="calculator-table-extra-details">
+                  <div class="calculator-table-extra-detail">PDF: <span>Print</span></div>
+                  <div class="calculator-table-extra-detail">Monthly Income: <span>250,000</span></div>
+                </div>
               </div>
             </div>
-            <div class="calculator-table">
+            <div class="calculator-details-table">
               <table>
+                <thead>
+                  <tr>
+                    <th>period</th>
+                    <th>outstanding</th>
+                    <th>principal(P)</th>
+                    <th>interest(I)</th>
+                    <th>P+I</th>
+                    <th>mgt fee</th>
+                    <th>total due</th>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr>
-                    <td>Total Principal Paid</td>
-                    <td><img src="/assets/naira.svg" alt="" />10,000,000.00</td>
+                    <td>1</td>
+                    <td>6,000,000</td>
+                    <td>1,045.80</td>
+                    <td>90, 000</td>
+                    <td>91,045.80</td>
+                    <td>0</td>
+                    <td>91,045.80</td>
                   </tr>
                   <tr>
-                    <td>Total Interest Paid</td>
-                    <td>
-                      <img src="/assets/naira.svg" alt="" />
-                      625,000.75
-                    </td>
+                    <td>2</td>
+                    <td>6,000,000</td>
+                    <td>1,045.80</td>
+                    <td>90, 000</td>
+                    <td>91,045.80</td>
+                    <td>0</td>
+                    <td>91,045.80</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>6,000,000</td>
+                    <td>1,045.80</td>
+                    <td>90, 000</td>
+                    <td>91,045.80</td>
+                    <td>0</td>
+                    <td>91,045.80</td>
                   </tr>
                 </tbody>
-                <tfoot>
-                  <tr>
-                    <td>Total Repayment</td>
-                    <td>
-                      <img src="/assets/naira.svg" alt="" />
-                      10,625,000.75
-                    </td>
-                  </tr>
-                </tfoot>
               </table>
-            </div>
-            <div class="interest-and-tenor">
-              <div class="interest-rate">Interest Rate: <span>24%</span></div>
-              <div class="tenor">Tenor: <span>12 Months</span></div>
-            </div>
-            <div class="disclaimer">
-              <div class="disclaimer-title">Disclaimer</div>
-              <div class="disclaimer-text">
-                Does not include Upfront Charges (Commitment Fee, Service Charge
-                & Management Fee). This is also assumed that the interest rate
-                remains the same.
-              </div>
             </div>
           </div>
         </div>
@@ -1431,7 +1504,7 @@
                   <div class="links-column">
                     <div class="link-row-header">Company</div>
                     <div class="link-row"><a href="/aboutUs.html"></a>About</a></div>
-                    <div class="link-row">Jobs</div>
+                    <div class="link-row"><a href="/careers.html">Jobs</a></div>
                     <div class="link-row"><a href="/index.html">Blog</a></div>
 <div class="link-row"><a href="/news.html">News</a></div>
 <div class="link-row"><a href="/downloads.html">Downloads</a></div>

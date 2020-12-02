@@ -3,7 +3,7 @@
 @import "common";
 @import "variables";
 @import "colors";
-@import "form";
+// @import "form";
 @import "bannerSlider";
 
 .modal {
@@ -3652,4 +3652,97 @@ section {
 .image_2 > img {
   height: 100%;
   width: 100%;
+}
+
+.csr-modal {
+  &#csr-education {
+    .csr-image {
+      background-image: url(/assets/news_banner.png);
+    }
+  }
+  &#csr-health {
+    .csr-image {
+      background-image: url(/assets/news_banner.png);
+    }
+  }
+  &#csr-environment {
+    .csr-image {
+      background-image: url(/assets/news_banner.png);
+    }
+  }
+  &#csr-poverty-alleviation {
+    .csr-image {
+      background-image: url(/assets/news_banner.png);
+    }
+  }
+
+
+  .mask {
+    padding: 9rem 2rem 2rem 2rem;
+    max-height: 90vh;
+    overflow: scroll;
+
+    .mask-close {
+      right: 2rem;
+    }
+
+    @include minWidth($breakpoint-tablet) {
+      max-height: unset;
+      overflow: unset;
+      padding: 12rem 6rem 2rem 6rem;
+
+      .mask-close {
+        right: 6rem;
+        top: 8.5rem;
+      }
+    }
+
+    @include minWidth($breakpoint-desktop) {
+      padding: 12rem 10rem 2rem 10rem;
+
+      .mask-close {
+        right: 10rem;
+      }
+    }
+  
+    .split-row {
+      align-items: center;
+      
+      .csr-image-section {
+        text-align: center;
+        
+        .csr-image {
+          height: 20rem;
+          width: 20rem;
+          border: 2px solid white;
+          border-radius: 50%;
+          background: white;
+          margin: 0 auto;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+
+        .csr-title {
+          color: $secondary-color;
+          font-size: 2.2rem;
+          font-family: $header-font;
+        }
+      }
+
+      .csr-details {
+        font-size: 1.3rem;
+        color: white;
+      }
+      
+      @include minWidth($breakpoint-tablet) {
+        align-items: flex-start;
+
+        .csr-details {
+          max-height: 30rem;
+          overflow-y: scroll;
+        }
+      }
+    }
+  }
 }

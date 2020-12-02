@@ -215,27 +215,6 @@ header #top-strip-container #top-strip #navigation-wrapper .extra-menu-links-wra
   }
 }
 
-header #search-wrapper,
-header #internet-banking-wrapper,
-header #menu-wrapper {
-  display: none;
-  z-index: 10000;
-}
-
-header #search-wrapper.visible,
-header #internet-banking-wrapper.visible,
-header #menu-wrapper.visible {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 100%;
-  background: rgba(16, 17, 20, 0.8);
-}
-
 header #search-wrapper .mask-contents .input-container {
   margin: 0 auto;
   width: 70%;
@@ -985,55 +964,6 @@ section.bg-right {
   padding: 0;
 }
 
-.section-wrapper section.split-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.section-wrapper section.split-row .row-half {
-  padding: 1.5rem 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.section-wrapper section.split-row .row-half.master {
-  width: 100%;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-}
-
-.section-wrapper section.split-row.reverse {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-}
-
-@media screen and (min-width: 760px) {
-  .section-wrapper section.split-row.reverse {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-  .section-wrapper section.split-row.reverse .left {
-    text-align: left;
-  }
-  .section-wrapper section.split-row.reverse .right {
-    text-align: right;
-  }
-}
-
 .section-wrapper section.split-row .description-image img {
   width: 20rem;
   height: auto;
@@ -1046,30 +976,92 @@ section.bg-right {
   }
 }
 
+div.split-row,
+section.split-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+div.split-row .row-half,
+section.split-row .row-half {
+  padding: 1.5rem 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+div.split-row .row-half.master,
+section.split-row .row-half.master {
+  width: 100%;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+div.split-row.reverse,
+section.split-row.reverse {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
 @media screen and (min-width: 760px) {
-  .section-wrapper section.split-row {
+  div.split-row.reverse,
+  section.split-row.reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  div.split-row.reverse .left,
+  section.split-row.reverse .left {
+    text-align: left;
+  }
+  div.split-row.reverse .right,
+  section.split-row.reverse .right {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  div.split-row,
+  section.split-row {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .section-wrapper section.split-row .right {
+  div.split-row .right,
+  section.split-row .right {
     text-align: left;
   }
-  .section-wrapper section.split-row .left {
+  div.split-row .left,
+  section.split-row .left {
     text-align: right;
   }
-  .section-wrapper section.split-row .row-half {
+  div.split-row .row-half,
+  section.split-row .row-half {
     padding: 0 1rem;
     width: 50%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .section-wrapper section.split-row {
+  div.split-row,
+  section.split-row {
     margin: 0;
   }
-  .section-wrapper section.split-row .row-half {
+  div.split-row .row-half,
+  section.split-row .row-half {
     padding: 0 2rem;
     width: 50%;
   }
@@ -1242,7 +1234,24 @@ section.bg-right {
   background: #F0EFEF;
 }
 
-.mask {
+.ftmb-modal {
+  display: none;
+  z-index: 10000;
+}
+
+.ftmb-modal.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(16, 17, 20, 0.8);
+}
+
+.ftmb-modal .mask {
   padding-top: 9rem;
   width: 100%;
   height: 100%;
@@ -1250,13 +1259,13 @@ section.bg-right {
 }
 
 @media screen and (min-width: 760px) {
-  .mask {
+  .ftmb-modal .mask {
     padding: 10rem 0 0 0;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .mask {
+  .ftmb-modal .mask {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1264,7 +1273,7 @@ section.bg-right {
   }
 }
 
-.mask .mask-close {
+.ftmb-modal .mask .mask-close {
   right: 2rem;
   top: 6.5rem;
   color: white;
@@ -1274,16 +1283,16 @@ section.bg-right {
 }
 
 @media screen and (min-width: 760px) {
-  .mask .mask-close {
+  .ftmb-modal .mask .mask-close {
     top: 7.5rem;
     right: 3rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .mask .mask-close {
+  .ftmb-modal .mask .mask-close {
     right: 15rem;
-    top: 9rem;
+    top: 8.5rem;
   }
 }
 
@@ -1362,6 +1371,10 @@ section.bg-right {
 
 #banner-container #news-banner {
   background-image: url("/assets/news_banner.png");
+}
+
+#banner-container #careers-banner {
+  background-image: url("/assets/careers_banner.png");
 }
 
 .share-container {
@@ -2197,6 +2210,31 @@ main {
   letter-spacing: 1.2px;
 }
 
+#loan-section-wrapper #loan-calculator-section .left .loan-calculator-card .input-grp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#loan-section-wrapper #loan-calculator-section .left .loan-calculator-card .input-grp .input-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  #loan-section-wrapper #loan-calculator-section .left .loan-calculator-card .input-grp {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 #loan-section-wrapper #loan-calculator-section .right {
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -2465,6 +2503,58 @@ main {
   }
 }
 
+#faq-search-modal,
+#loan-calculator-modal {
+  display: none;
+  z-index: 10000;
+}
+
+#faq-search-modal.visible,
+#loan-calculator-modal.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(16, 17, 20, 0.8);
+}
+
+#faq-search-modal .mask,
+#loan-calculator-modal .mask {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#faq-search-modal .mask .mask-contents,
+#loan-calculator-modal .mask .mask-contents {
+  width: 90%;
+  margin: 0 auto;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 4px;
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+
+@media screen and (min-width: 760px) {
+  #faq-search-modal .mask .mask-contents,
+  #loan-calculator-modal .mask .mask-contents {
+    padding: 3rem;
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #faq-search-modal .mask .mask-contents,
+  #loan-calculator-modal .mask .mask-contents {
+    width: 50%;
+  }
+}
+
 #faq-section div {
   text-align: right;
 }
@@ -2540,91 +2630,176 @@ main {
           flex: 1;
 }
 
-#loan-calculator-modal .mask .mask-contents div img {
+#loan-calculator-modal .mask .mask-contents {
+  width: 90%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media screen and (min-width: 760px) {
+  #loan-calculator-modal .mask .mask-contents {
+    width: 80%;
+  }
+}
+
+#loan-calculator-modal .mask .mask-contents .split-row .row-half div img {
   width: 20px;
 }
 
-#loan-calculator-modal .mask .mask-contents td img {
+#loan-calculator-modal .mask .mask-contents .split-row .row-half td img {
   width: 15px;
 }
 
-#loan-calculator-modal .mask .mask-contents .mask-header {
+#loan-calculator-modal .mask .mask-contents .split-row .row-half .mask-header {
   text-align: center;
 }
 
-#loan-calculator-modal .mask .mask-contents .mask-header .small-text {
+#loan-calculator-modal .mask .mask-contents .split-row .row-half .mask-header .small-text {
   font-size: 0.9rem;
 }
 
-#loan-calculator-modal .mask .mask-contents .mask-header .monthly-payments {
+#loan-calculator-modal .mask .mask-contents .split-row .row-half .mask-header .monthly-payments {
   font-size: 2.3rem;
   font-weight: bold;
 }
 
 @media screen and (min-width: 1024px) {
-  #loan-calculator-modal .mask .mask-contents .mask-header .monthly-payments {
+  #loan-calculator-modal .mask .mask-contents .split-row .row-half .mask-header .monthly-payments {
     font-size: 2.5rem;
   }
 }
 
-#loan-calculator-modal .mask .mask-contents .calculator-table {
+#loan-calculator-modal .mask .mask-contents .split-row .row-half .calculator-table {
   padding: 1rem 0;
   width: 100%;
 }
 
-#loan-calculator-modal .mask .mask-contents .calculator-table table {
+#loan-calculator-modal .mask .mask-contents .split-row .row-half .calculator-table table {
   width: 100%;
 }
 
-#loan-calculator-modal .mask .mask-contents .calculator-table table tbody tr:nth-child(1) td {
+#loan-calculator-modal .mask .mask-contents .split-row .row-half .calculator-table table tbody tr:nth-child(1) td {
   border-bottom: 1px solid #70707080;
 }
 
-#loan-calculator-modal .mask .mask-contents .calculator-table table tbody td,
-#loan-calculator-modal .mask .mask-contents .calculator-table table tfoot td {
+#loan-calculator-modal .mask .mask-contents .split-row .row-half .calculator-table table tbody td,
+#loan-calculator-modal .mask .mask-contents .split-row .row-half .calculator-table table tfoot td {
   padding: 0.5rem 0;
 }
 
-#loan-calculator-modal .mask .mask-contents .calculator-table table tbody td:nth-child(2),
-#loan-calculator-modal .mask .mask-contents .calculator-table table tfoot td:nth-child(2) {
+#loan-calculator-modal .mask .mask-contents .split-row .row-half .calculator-table table tbody td:nth-child(2),
+#loan-calculator-modal .mask .mask-contents .split-row .row-half .calculator-table table tfoot td:nth-child(2) {
   text-align: right;
 }
 
-#loan-calculator-modal .mask .mask-contents .calculator-table table tfoot {
+#loan-calculator-modal .mask .mask-contents .split-row .row-half .calculator-table table tfoot {
   font-size: 1.2rem;
 }
 
 @media screen and (min-width: 1024px) {
-  #loan-calculator-modal .mask .mask-contents .calculator-table table tfoot {
+  #loan-calculator-modal .mask .mask-contents .split-row .row-half .calculator-table table tfoot {
     font-size: 1.5rem;
   }
 }
 
-#loan-calculator-modal .mask .mask-contents .interest-and-tenor {
-  padding: 1.3rem 0 2rem 0;
+#loan-calculator-modal .mask .mask-contents .split-row .row-half .calculator-table-extra-details {
+  padding: 0.5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 0.8rem;
   font-size: 0.8rem;
 }
 
-#loan-calculator-modal .mask .mask-contents .interest-and-tenor .interest-rate,
-#loan-calculator-modal .mask .mask-contents .interest-and-tenor .tenor {
+#loan-calculator-modal .mask .mask-contents .split-row .row-half .calculator-table-extra-details .calculator-table-extra-detail {
   padding-right: 0.8rem;
 }
 
-#loan-calculator-modal .mask .mask-contents .interest-and-tenor .interest-rate span,
-#loan-calculator-modal .mask .mask-contents .interest-and-tenor .tenor span {
+#loan-calculator-modal .mask .mask-contents .split-row .row-half .calculator-table-extra-details .calculator-table-extra-detail span {
   color: #E99F1E;
 }
 
-#loan-calculator-modal .mask .mask-contents .disclaimer {
-  font-size: 0.8rem;
+#loan-calculator-modal .mask .mask-contents .split-row .row-half .eligibility {
+  font-family: "PT Serif", serif;
+  font-size: 3rem;
+  margin-bottom: 2rem;
 }
 
-#loan-calculator-modal .mask .mask-contents .disclaimer .disclaimer-title {
+#loan-calculator-modal .mask .mask-contents .split-row .row-half .eligibility.positive {
+  color: green;
+}
+
+#loan-calculator-modal .mask .mask-contents .split-row .row-half .eligibility.negative {
+  color: #ED2228;
+}
+
+#loan-calculator-modal .mask .mask-contents .split-row .row-half .disclaimer {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+#loan-calculator-modal .mask .mask-contents .split-row .row-half .disclaimer .disclaimer-title {
   color: #E99F1E;
   padding: 0.3rem 0;
+}
+
+#loan-calculator-modal .mask .mask-contents .calculator-details-table {
+  width: 100%;
+}
+
+#loan-calculator-modal .mask .mask-contents .calculator-details-table table {
+  width: 100%;
+  margin: 0;
+}
+
+#loan-calculator-modal .mask .mask-contents .calculator-details-table table tr {
+  background: #F0EFEF;
+}
+
+#loan-calculator-modal .mask .mask-contents .calculator-details-table table th, #loan-calculator-modal .mask .mask-contents .calculator-details-table table td {
+  margin: 0.5rem 0;
+  font-size: 0.7rem;
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+#loan-calculator-modal .mask .mask-contents .calculator-details-table table thead th {
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+#loan-calculator-modal .mask .mask-contents .calculator-details-table table tbody tr:nth-child(even) {
+  background: #F0EFEF;
+}
+
+#loan-calculator-modal .mask .mask-contents .calculator-details-table table tbody tr:nth-child(odd) {
+  background-color: #0F4665;
+  color: white;
+}
+
+@media screen and (min-width: 760px) {
+  #loan-calculator-modal .mask .mask-contents .calculator-details-table table {
+    margin: 1rem;
+  }
+  #loan-calculator-modal .mask .mask-contents .calculator-details-table table th, #loan-calculator-modal .mask .mask-contents .calculator-details-table table td {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #loan-calculator-modal .mask .mask-contents .calculator-details-table table {
+    margin: 2rem;
+  }
+  #loan-calculator-modal .mask .mask-contents .calculator-details-table table th, #loan-calculator-modal .mask .mask-contents .calculator-details-table table td {
+    padding: 0.8rem 0rem 0.8rem 0.8rem;
+  }
 }
 
 #faq-search-modal .mask .mask-contents .mask-header {
@@ -2717,57 +2892,5 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-#faq-search-modal,
-#loan-calculator-modal {
-  display: none;
-  z-index: 10000;
-}
-
-#faq-search-modal.visible,
-#loan-calculator-modal.visible {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 100%;
-  background: rgba(16, 17, 20, 0.8);
-}
-
-#faq-search-modal .mask,
-#loan-calculator-modal .mask {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#faq-search-modal .mask .mask-contents,
-#loan-calculator-modal .mask .mask-contents {
-  width: 90%;
-  margin: 0 auto;
-  background: white;
-  padding: 2.5rem;
-  border-radius: 4px;
-  max-height: 70vh;
-  overflow-y: scroll;
-}
-
-@media screen and (min-width: 760px) {
-  #faq-search-modal .mask .mask-contents,
-  #loan-calculator-modal .mask .mask-contents {
-    padding: 3rem;
-    width: 70%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #faq-search-modal .mask .mask-contents,
-  #loan-calculator-modal .mask .mask-contents {
-    width: 50%;
-  }
 }
 /*# sourceMappingURL=index.css.map */

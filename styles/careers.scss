@@ -1,0 +1,135 @@
+@import "variables";
+
+#careers-section {
+  .split-row {
+    align-items: flex-start;
+
+    .row-half {
+      .careers-header-text {
+        font-size: 2.5rem;
+        text-transform: capitalize;
+        margin-bottom: 1.5rem;
+      }
+
+      .careers-sub-text  {
+        margin-bottom: 1.5rem;
+      }
+
+      .careers-tagline {
+        text-transform: uppercase;
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .email-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .email-icon {
+          height: 1.5rem;
+          width: 1.5rem;
+          margin-right: 0.7rem;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        .email-text {
+
+        }
+      }
+  
+      .main-image {
+        height: 20rem;
+        background-image: url(/assets/careers_main_image.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 2px solid $primary-color;
+        border-radius: 4px;
+      }
+
+      .job-list-container {
+        margin: 2rem 0;
+
+        .job-list-header {
+          text-transform: uppercase;
+          font-size: 1.5rem;
+          font-family: $emphasis-font;
+          color: $primary-color;
+          font-weight: bold;
+        }
+
+        .job-list {
+          display: flex;
+          flex-direction: column;
+
+          table.job-row {
+            width: 100%;
+            margin: 1rem 0;
+            background: $gray-bg;
+            border-radius: 4px;
+            padding: 1rem;
+
+            &:hover {
+              box-shadow: 0px 0px 6px -1px #272727;
+            }
+            thead {
+              th {
+                padding: 1rem 0rem 0.5rem 1rem;
+                text-transform: uppercase;
+                font-family: $emphasis-font;
+                font-size: 0.7rem;
+                width: 25%;
+
+                &:last-child {
+                  padding-right: 0.8rem;
+                }
+              }
+            }
+
+            tbody {
+              td {
+                padding: 0.5rem 0rem 1rem 1rem;
+                text-transform: capitalize;
+                font-size: 0.8rem;
+                width: 25%;
+
+                &.read-more {
+                  color: $secondary-color;
+                }
+
+                &:last-child {
+                  padding-right: 0.8rem;
+                }
+              }
+            }
+            
+            @include minWidth($breakpoint-tablet) {
+              thead {
+                th {
+                  padding: 1.2rem 1.2rem 0.6rem 1.2rem;
+                  font-size: 1rem;
+                  width: unset;
+                }
+              }
+              
+              tbody {
+                td {
+                  padding: 0.6rem 1.2rem 1.2rem 1.2rem;
+                  font-size: 1rem;
+                  width: unset;
+                }
+              }              
+            }
+          }
+        }
+      }
+    }
+  }
+}

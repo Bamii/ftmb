@@ -21,8 +21,8 @@ section.bg-left {
 }
 
 #news-section .news-items .news-item {
-  max-width: 15rem;
-  margin: 1.5rem;
+  max-width: 270px;
+  margin: 0.5rem;
 }
 
 #news-section .news-items .news-item:hover {

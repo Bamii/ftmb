@@ -4,14 +4,14 @@
   const searchWrapper = document.getElementById("search-wrapper");
   const internetBankingWrapper = document.getElementById("internet-banking-wrapper");
   const mobileMenu = document.getElementById("mobile-menu-button");
-  const internetBankingButton = document.getElementById("internet-banking-button");
-  const searchButton = document.getElementById("search-button");
+
+  const ftmbModalOpen =  document.querySelectorAll("[data-modal-target]");
+  const ftmbModalClose =  document.querySelectorAll("[data-modal-close]");
+
   const triggerSearch = document.getElementById("search");
   const mobileMenuLinks = document.getElementsByClassName("mobile-menu-header");
   const closeButtons = document.getElementsByClassName("menu-close-button");
-  const internetBankingModalButtons = document.getElementsByClassName("internet-banking-modal-button")
-  const searchClose = document.getElementById("search-close");
-  const internetBankingClose = document.getElementById("internet-banking-close");
+  const internetBankingModalButtons = document.getElementsByClassName("internet-banking-modal-button");
   let currentLinkIndex = 0;
   let isMenuOpen = false;
   let currentInternetBankingTab = 0;
@@ -61,27 +61,25 @@
     window.open("/search.html");
   }
 
-  internetBankingButton.onclick = function() {
-    isMenuOpen = false;
-    menuWrapper.classList.remove("visible");
-    internetBankingWrapper.classList.toggle("visible");
-    searchWrapper.classList.remove("visible");
-  }
+  Array.from(ftmbModalOpen).map(el => {
+    el.onclick = function(e) {
+      e.stopPropagation();
+      const { target, currentTarget } = e;
+      const id = currentTarget.dataset.modalTarget;
+      
+      document.getElementById(id).classList.toggle("visible");
+    }
+  })
   
-  internetBankingClose.onclick = function() {
-    internetBankingWrapper.classList.remove("visible");
-  }
+  Array.from(ftmbModalClose).map(el => {
+    el.onclick = function(e) {
+      e.stopPropagation();
+      const { target, currentTarget } = e;
+      const id = currentTarget.dataset.modalClose;
   
-  searchButton.onclick = function() {
-    isMenuOpen = false;
-    menuWrapper.classList.remove("visible");
-    internetBankingWrapper.classList.remove("visible");
-    searchWrapper.classList.toggle("visible");
-  }
-
-  searchClose.onclick = function() {
-    searchWrapper.classList.remove("visible");
-  }
+      document.getElementById(id).classList.remove("visible");
+    }
+  })
 
   mobileMenu.onclick = function(e) {
     openMobileMenu(e);

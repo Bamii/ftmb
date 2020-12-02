@@ -58,7 +58,7 @@
             <div class="extra-menu-links-wrapper">
               <div class="extra-menu-links">
                 <div class="extra-menu-link">
-                  <div id="search-button" class="menu-text">
+                  <div data-modal-target="search-wrapper" id="search-button" class="menu-text">
                     <img src="/assets/search_icon.svg" alt="Search Icon" />
                   </div>
                 </div>
@@ -414,9 +414,9 @@
         </div>
       </div>
 
-      <div id="search-wrapper" class="">
+      <div id="search-wrapper" class="ftmb-modal">
         <div class="mask">
-          <div id="search-close" class="mask-close">(x) close</div>
+          <div data-modal-close="search-wrapper" id="search-close" class="mask-close">(x) close</div>
           <div class="mask-contents">
             <div class="mask-header">Search</div>
             <div class="input-container">
@@ -434,9 +434,9 @@
         <div class="mobile-search-container"></div>
       </div>
 
-      <div id="internet-banking-wrapper" class="">
+      <div id="internet-banking-wrapper" class="ftmb-modal">
         <div class="mask">
-          <div id="internet-banking-close" class="mask-close">(x) close</div>
+          <div data-modal-close="internet-banking-wrapper" id="internet-banking-close" class="mask-close">(x) close</div>
           <div class="mask-contents">
             <div class="mask-header">
               Get all you need with our Online Banking Application

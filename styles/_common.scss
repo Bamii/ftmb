@@ -109,35 +109,6 @@ section {
     }
   
     &.split-row {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-  
-      .row-half {
-        padding: 1.5rem 0;
-        flex: 1;
-  
-        &.master {
-          width: 100%;
-          flex: 2;
-        }
-      }
-  
-      &.reverse {
-        flex-direction: column-reverse;
-  
-        @include minWidth($breakpoint-tablet) {
-          flex-direction: row-reverse;
-      
-          .left {
-            text-align: left;
-          }
-          .right {
-            text-align: right;
-          }
-        }
-      }
-      
       .description-image {
         img {
           width: 20rem;
@@ -149,31 +120,63 @@ section {
           }
         }
       }
-    
-      @include minWidth($breakpoint-tablet) {
-        flex-direction: row;
-        
-        .right {
-          text-align: left;
-        }
-        .left {
-          text-align: right;
-        }
-        
-        .row-half {
-          padding: 0 1rem;
-          width: 50%;
-        }
-      }
-      
-      @include minWidth($breakpoint-desktop) {
-        margin: 0;
+    }
+  }
+}
+
+div.split-row,
+section.split-row {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .row-half {
+    padding: 1.5rem 0;
+    flex: 1;
+
+    &.master {
+      width: 100%;
+      flex: 2;
+    }
+  }
+
+  &.reverse {
+    flex-direction: column-reverse;
+
+    @include minWidth($breakpoint-tablet) {
+      flex-direction: row-reverse;
   
-        .row-half {
-          padding: 0 2rem;
-          width: 50%;
-        }
+      .left {
+        text-align: left;
       }
+      .right {
+        text-align: right;
+      }
+    }
+  }
+
+  @include minWidth($breakpoint-tablet) {
+    flex-direction: row;
+    
+    .right {
+      text-align: left;
+    }
+    .left {
+      text-align: right;
+    }
+    
+    .row-half {
+      padding: 0 1rem;
+      width: 50%;
+    }
+  }
+  
+  @include minWidth($breakpoint-desktop) {
+    margin: 0;
+
+    .row-half {
+      padding: 0 2rem;
+      width: 50%;
     }
   }
 }
@@ -327,37 +330,52 @@ section {
   background: $gray-bg;
 }
 
-.mask {
-  padding-top: 9rem;
-  width: 100%;
-  height: 100%;
-  position: relative;
+.ftmb-modal {
+  display: none;
+  z-index: 10000;
 
-  @include minWidth($breakpoint-tablet) {
-    padding: 10rem 0 0 0;
-  }
-
-  @include minWidth($breakpoint-desktop) {
+  &.visible {
     display: flex;
-    padding: 6.7rem 0 0 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background: $transluscent-bg;
   }
-
-  .mask-close {
-    right: 2rem;
-    top: 6.5rem;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    position: absolute;
-
+  
+  .mask {
+    padding-top: 9rem;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  
     @include minWidth($breakpoint-tablet) {
-      top: 7.5rem;
-      right: 3rem;
+      padding: 10rem 0 0 0;
     }
-
+  
     @include minWidth($breakpoint-desktop) {
-      right: 15rem;
-      top: 9rem;
+      display: flex;
+      padding: 6.7rem 0 0 0;
+    }
+  
+    .mask-close {
+      right: 2rem;
+      top: 6.5rem;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      position: absolute;
+  
+      @include minWidth($breakpoint-tablet) {
+        top: 7.5rem;
+        right: 3rem;
+      }
+  
+      @include minWidth($breakpoint-desktop) {
+        right: 15rem;
+        top: 8.5rem;
+      }
     }
   }
 }
@@ -420,6 +438,9 @@ section {
   }
   #news-banner {
     background-image: url("/assets/news_banner.png") ;
+  }
+  #careers-banner {
+    background-image: url("/assets/careers_banner.png") ;
   }
 }
 
